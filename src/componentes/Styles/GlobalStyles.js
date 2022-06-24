@@ -12,21 +12,30 @@ export default createGlobalStyle`
 
     --family:"Untitled Sans";
     --family1: "Futura Std";
-    --font-size: 14px;
-    --line-height: 20px;
-    --text-align: left;
-    --letter-spacing: normal; 
-    
+    --fsize: 32px;
+     
     --blue: #3eb1c8;
     --blue1: #01426a;
     --blue2: #3eb1c8;
     --blue3:#002554;
     --gris:#f6f8fc;
-
-    --border: 6px;
-}
+ }
 html{
    background-color:var(--fondo);
 }
-`
+  .hoverable {
+    position: static;
+  }
 
+  .hoverable > a:after {
+    content: "\25BC";
+    font-size: 10px;
+    padding-left: 6px;
+    position: relative;
+    top: -1px;
+  }
+
+  .hoverable:hover .mega-menu {
+    display: block;
+  }
+`

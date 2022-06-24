@@ -9927,6 +9927,16 @@ video {
   }
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 .animate-none {
   animation: none;
 }
@@ -9945,6 +9955,10 @@ video {
 
 .animate-bounce {
   animation: bounce 1s infinite;
+}
+
+.animate-marquee {
+  animation: marquee 39.7s linear infinite;
 }
 
 .cursor-auto {
@@ -39192,6 +39206,10 @@ video {
     animation: bounce 1s infinite;
   }
 
+  .sm\:animate-marquee {
+    animation: marquee 39.7s linear infinite;
+  }
+
   .sm\:cursor-auto {
     cursor: auto;
   }
@@ -68423,6 +68441,10 @@ video {
 
   .md\:animate-bounce {
     animation: bounce 1s infinite;
+  }
+
+  .md\:animate-marquee {
+    animation: marquee 39.7s linear infinite;
   }
 
   .md\:cursor-auto {
@@ -97658,6 +97680,10 @@ video {
     animation: bounce 1s infinite;
   }
 
+  .lg\:animate-marquee {
+    animation: marquee 39.7s linear infinite;
+  }
+
   .lg\:cursor-auto {
     cursor: auto;
   }
@@ -126891,6 +126917,10 @@ video {
     animation: bounce 1s infinite;
   }
 
+  .xl\:animate-marquee {
+    animation: marquee 39.7s linear infinite;
+  }
+
   .xl\:cursor-auto {
     cursor: auto;
   }
@@ -156122,6 +156152,10 @@ video {
 
   .\32xl\:animate-bounce {
     animation: bounce 1s infinite;
+  }
+
+  .\32xl\:animate-marquee {
+    animation: marquee 39.7s linear infinite;
   }
 
   .\32xl\:cursor-auto {

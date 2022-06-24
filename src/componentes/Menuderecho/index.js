@@ -1,8 +1,10 @@
 import React from 'react'
 import lupa from '../../img/lupa.svg'
 import { Link, Lupa} from './styles'
+import { Submenu } from '../Submenu'
 
-export const Menuderecho = (mouseOver) => {
+export const Menuderecho = () => {
+ 
   return (
     <div className="flex flex-row-reverse space-x-10">
       <Lupa>
@@ -21,7 +23,7 @@ export const Menuderecho = (mouseOver) => {
         <a className="normal-case" href="/emergencyroom">Sala de emergencia</a>
       </Link>
       <Link>
-        <a className="normal-case" href="/services" onMouseOver={mouseOver}>Servicio y especialidades</a>
+        <a className="" href="/services">Servicio y especialidades</a>
       </Link>
     </div>
   )

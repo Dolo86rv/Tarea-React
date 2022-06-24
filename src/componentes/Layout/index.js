@@ -6,11 +6,12 @@ import { Marquee } from '../Marquee'
 import { Container, Wrapper} from './styles'
 
 export const Layout = () => {
+  
   return (
     <div>
         <Container>
           <Header />
-          <Wrapper>
+           <Wrapper>
             <Marquee />
             <Contenido />
             <Footer />

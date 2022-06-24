@@ -1,31 +1,24 @@
 import React, { useState } from 'react'
-import { Container, Wrapper } from './styles'
 import logo from '../../img/logo-1.svg'
 import { Menuderecho } from '../Menuderecho'
 import { Submenu } from '../Submenu'
 
 
 export const Header = () => {
-
-  const[IsOver, setIsOver]=useState(false)
-  const toggleOpen=()=>{
+  
+  const[IsOver, setIsOver]=useState(true)
+  const cursorEncima=()=>{
     setIsOver(!IsOver);
-  };
+  }
 
   return (
-    <Container>
-      <div className="flex pt-3 pb-3">
+      <div className="flex pt-4 pb-4 bg-white pl-20 pr-20">
         <div className="flex-none">
-          <Wrapper>
-            <img src= {logo} alt='logo'></img>
-          </Wrapper>
+           <img src= {logo} alt='logo' width={104} height={40}></img>
         </div>
         <div className="flex-auto pt-1">
-          <Menuderecho toggleOpen={toggleOpen}>
-            <Submenu/>
-          </Menuderecho >
+          <Menuderecho />
         </div>
       </div>
-    </Container>
   )
 }
