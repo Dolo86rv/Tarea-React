@@ -8,16 +8,13 @@ import { Container, Wrapper} from './styles'
 export const Layout = () => {
   
   return (
-    <div>
-        <Container>
+       <Container>
           <Header />
+          <Marquee />
            <Wrapper>
-            <Marquee />
             <Contenido />
             <Footer />
           </Wrapper>
-        </Container>
-
-    </div>
+      </Container>
   )
 }

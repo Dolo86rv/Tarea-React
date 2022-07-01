@@ -1,6 +1,7 @@
 import { Popover, Transition } from "@headlessui/react"
 import { Fragment, useRef } from "react"
-import { Link} from './styles'
+import { Link} from '../Items/styles'
+
 
 export const Item = ({title, items} = props) => {
 
@@ -40,7 +41,7 @@ export const Item = ({title, items} = props) => {
                   ref={buttonRef}
                   className={`
                   ${open ? "" : "text-opacity-90"}
-                  text-white group bg-orange-700 px-3 py-2 rounded-md inline-flex items-center text-base font-medium hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
+                  text-white group bg-orange-700 px-3 py-1 inline-flex items-center text-base font-medium hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
                   onMouseEnter={onMouseEnter.bind(null, open)}
                   onMouseLeave={onMouseLeave.bind(null, open)}
                 >
@@ -57,28 +58,28 @@ export const Item = ({title, items} = props) => {
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-1"
                 >
-                  <Popover.Panel className="absolute z-10 w-screen px-4 mt-0 transform -translate-x-1/2 left-1/2 sm:px-0">
+                  <Popover.Panel className="absolute z-10 w-screen text-left px-4 mt-0 transform -translate-x-1/2 left-1/2 sm:px-0">
                     <div
                       className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5"
                       onMouseEnter={onMouseEnter.bind(null, open)}
                       onMouseLeave={onMouseLeave.bind(null, open)}
                     >
-                      <div className="relative grid gap-8 bg-gray-200 mt-3 p-7 lg:grid-cols-2">
-                        {items.map((item) => (
+                      <div className="relative bg-gray-200 mt-2 p-4 grid lg:grid-cols-3 divide-x gap-8">
+                      {items.map((item) => (
                           <a
                             key={item.name}
-                            href={item.href}
-                            className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+                            href="/home"
+                            className="flex items-center p-2 -m-3 transition duration-150 ease-in-out focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                           >
                             <div className="ml-4">
                               <p className="pb-6 pt-6 text-3xl leading-10 space-x-0 text-gray-700">
                                 {item.name}
                               </p>
-                                <ul>
-                                  <li className="text-sm text-gray-500">
-                                    {item.description}
-                                  </li>
-                                  
+                                <ul className="text-sm text-gray-500">
+                                    {item.description.map((elemento,)=>
+                                    <li>
+                                       <a className="normal-case" href={item.href.map((h,i)=>h)}>{elemento}</a> 
+                                    </li> )}
                                 </ul>
                               </div>
                            </a>

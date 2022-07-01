@@ -10,7 +10,7 @@ export default createGlobalStyle`
     --white: #ffffff;
     --white1: #f4f4f7;
 
-    --family:"Untitled Sans";
+    --family:"SesameFutura";
     --family1: "Futura Std";
     --fsize: 32px;
      
@@ -22,20 +22,11 @@ export default createGlobalStyle`
  }
 html{
    background-color:var(--fondo);
+   min-height:100%;
 }
-  .hoverable {
-    position: static;
-  }
-
-  .hoverable > a:after {
-    content: "\25BC";
-    font-size: 10px;
-    padding-left: 6px;
-    position: relative;
-    top: -1px;
-  }
-
-  .hoverable:hover .mega-menu {
-    display: block;
-  }
+*{
+   padding:0;
+   margin:0;
+   box-sizing:border-box;
+} 
 `
