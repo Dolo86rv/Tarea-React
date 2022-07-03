@@ -10,8 +10,8 @@ export default createGlobalStyle`
     --white: #ffffff;
     --white1: #f4f4f7;
 
-    --family:"SesameFutura";
-    --family1: "Futura Std";
+    --font-family-secondary: "SesameFutura";
+    --font-family-primary: "Futura Std";
     --fsize: 32px;
      
     --blue: #3eb1c8;
@@ -19,6 +19,13 @@ export default createGlobalStyle`
     --blue2: #3eb1c8;
     --blue3:#002554;
     --gris:#f6f8fc;
+
+    --font-weight-light:400;
+
+    --font-size-7:24px;
+  
+    --tipo-headding-1:
+    --typo-heading-l: var(--font-weight-light) var(--font-size-7) var(--font-family-primary);
  }
 html{
    background-color:var(--fondo);
