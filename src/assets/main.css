@@ -9937,16 +9937,6 @@ video {
   }
 }
 
-@keyframes marquee2 {
-  0% {
-    transform: translateX(100%);
-  }
-
-  100% {
-    transform: translateX(0%);
-  }
-}
-
 .animate-none {
   animation: none;
 }
@@ -9968,11 +9958,7 @@ video {
 }
 
 .animate-marquee {
-  animation: marquee 24.65s linear infinite;
-}
-
-.animate-marquee2 {
-  animation: marquee2  24.65s linear infinite;
+  animation: marquee 36.25s linear infinite;
 }
 
 .cursor-auto {
@@ -39385,11 +39371,7 @@ video {
   }
 
   .sm\:animate-marquee {
-    animation: marquee 24.65s linear infinite;
-  }
-
-  .sm\:animate-marquee2 {
-    animation: marquee2  24.65s linear infinite;
+    animation: marquee 36.25s linear infinite;
   }
 
   .sm\:cursor-auto {
@@ -68790,11 +68772,7 @@ video {
   }
 
   .md\:animate-marquee {
-    animation: marquee 24.65s linear infinite;
-  }
-
-  .md\:animate-marquee2 {
-    animation: marquee2  24.65s linear infinite;
+    animation: marquee 36.25s linear infinite;
   }
 
   .md\:cursor-auto {
@@ -98195,11 +98173,7 @@ video {
   }
 
   .lg\:animate-marquee {
-    animation: marquee 24.65s linear infinite;
-  }
-
-  .lg\:animate-marquee2 {
-    animation: marquee2  24.65s linear infinite;
+    animation: marquee 36.25s linear infinite;
   }
 
   .lg\:cursor-auto {
@@ -127600,11 +127574,7 @@ video {
   }
 
   .xl\:animate-marquee {
-    animation: marquee 24.65s linear infinite;
-  }
-
-  .xl\:animate-marquee2 {
-    animation: marquee2  24.65s linear infinite;
+    animation: marquee 36.25s linear infinite;
   }
 
   .xl\:cursor-auto {
@@ -157005,11 +156975,7 @@ video {
   }
 
   .\32xl\:animate-marquee {
-    animation: marquee 24.65s linear infinite;
-  }
-
-  .\32xl\:animate-marquee2 {
-    animation: marquee2  24.65s linear infinite;
+    animation: marquee 36.25s linear infinite;
   }
 
   .\32xl\:cursor-auto {

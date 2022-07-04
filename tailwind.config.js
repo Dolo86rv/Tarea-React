@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        marquee: 'marquee 40.7s linear infinite',
+        marquee: 'marquee 36.25s linear infinite',
       },
       keyframes: {
         marquee: {
@@ -13,12 +13,10 @@ module.exports = {
         },
       },
       colors:{
-        turquee:'#3eb1c8',
+        'turquee':'#3eb1c8',
       }, 
       fontFamily:{
-        'Futura-Std':['SesameFutura'],
-        'Untitled-Sans':['Untitled Sans Regular']
-
+        'Futura-Std':['Futura Std-Book'],
       },  
      backgroundImage:theme=>({
       'imagen_fondo':'url(./img/info-background.png)'

@@ -9,7 +9,7 @@ export const Home = () => {
   <Container>
     <Seccion1>
       <Imagen>
-        <img src={fondo} alt='Image background' width="100%"></img>
+        <img src={fondo} alt="Image background" width="100%"></img>
       </Imagen>
         <div className="absolute my-40 mx-60 p-4 text-center text-white">
               <div className="block">
@@ -20,7 +20,7 @@ export const Home = () => {
              </div>
         </div> 
         <Arrow>
-            <img src={arrow_down} className="overflow-hidden" width="25px" height="25px" alt="arrow"></img>
+            <img src={arrow_down} className="overflow-hidden" width="25px" height="25px" alt='arrow'  type='img/svg'></img>
         </Arrow>
     </Seccion1>   
   </Container>
