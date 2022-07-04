@@ -58,13 +58,13 @@ export const Item = ({title, subMenu} = props) => {
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-1"
                 >
-                  <Popover.Panel className="absolute z-10 w-screen px-4 mt-0 transform -translate-x-1/2 left-1/2 sm:px-0">
+                  <Popover.Panel className="absolute z-10 w-screen px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0">
                     <div
                       className="overflow-hidden shadow-lg ring-1 ring-black ring-opacity-5"
                       onMouseEnter={onMouseEnter.bind(null, open)}
                       onMouseLeave={onMouseLeave.bind(null, open)}
                     >
-                      <div className="relative bg-gray-100 p-12">
+                      <div className="relative bg-gray-200 p-12">
                         {subMenu}
                       </div>
                     </div>

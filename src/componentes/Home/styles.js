@@ -9,9 +9,6 @@ export const Seccion1=styled.div`
      width:100%;
      
 ` 
-export const Imagen=styled.div`
-      position:absolute;
-`
 export const Arrow=styled.div`
    position:absolute;
    color:#ffffff;

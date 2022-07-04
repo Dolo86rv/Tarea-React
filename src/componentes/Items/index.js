@@ -156,16 +156,16 @@ const serviciosEspecialidades_html=()=>{
     return (
       <div className="grid grid-cols-3">
         <div>
-          <div className="text-2xl">Servicios y especialidades</div>
-          <div className="pt-5 pr-5">En el Hospital Ashford ofrecemos una gran diversidad de servicios.</div>
+          <div className="text-2xl text-c_text">Servicios y especialidades</div>
+          <div className="pt-5 pr-5 text-c_text">En el Hospital Ashford ofrecemos una gran diversidad de servicios.</div>
         </div>
         {servicios_especialidades.map((item) => (
-          <div className="pl-10 space-y-5 border-l-2 border-gray-300" key={item.id}>
-            <Link key={item.id} className="text-lg" to={item.href}>{item.description}</Link>
+          <div className="pl-10 space-y-5 border-l border-gray-400" key={item.id}>
+            <Link key={item.id} className="text-lg text-turquee" to={item.href}>{item.description}</Link>
 
             { item.sub_menu.map((sub_item) => (
               <div key={sub_item.id}>
-                <Link key={sub_item.id} to={sub_item.href}>{sub_item.description}</Link >
+                <Link key={sub_item.id} to={sub_item.href} className="text-c_text hover:text-turquee">{sub_item.description}</Link >
               </div>
               ))
             }
@@ -200,20 +200,20 @@ const serviciosEspecialidades_html=()=>{
     return(
       <div className="grid grid-cols-3">
          <div>
-            <div className="text-2xl">
+            <div className="text-2xl text-c_text">
                 Sobre Nostros
             </div>
-            <div className="pt-5 pr-5">
+            <div className="pt-5 pr-5 text-c_text">
               <p>El hospital Ashford cuenta con una facultad de aproximadamente 250 médicos, 630 empleados, y con 175 camas para atender paciente en prácticamente todas las especialidades.</p>
             </div>
         </div>
         {sobre_nosotros.map((item)=>(
-          <div className="pl-10 space-y-5 border-l-1 border-gray-300" key={item.id}>
-            <Link key={item.id} to={item.href} className="text-lg">{item.description}</Link>
+          <div className="pl-10 space-y-5 border-l border-gray-400" key={item.id}>
+            <Link key={item.id} to={item.href} className="text-lg text-turquee">{item.description}</Link>
 
             {item.sub_menu.map((subItem)=>(
               <div key={subItem.id}>
-                <Link key={subItem.id} to={subItem.href}>{subItem.description}</Link>
+                <Link key={subItem.id} to={subItem.href} className="text-c_text hover:text-turquee">{subItem.description}</Link>
               </div>
             ))}
           </div>
@@ -270,23 +270,25 @@ const para_pacientes=[
 const paraPacientes_html=()=>{
      
   return (
-    <div className="grid grid-cols-3">
+    <div className="grid grid-cols-3 pb-8">
       <div>
-        <div className="text-2xl">
+        <div className="text-2xl text-c_text">
               Para Paciente
         </div>
-        <div className="pt-5 pr-5">
+        <div className="pt-5 pr-5 text-c_text">
           <p>Encuentre guias esenciales para que todo paciente este informado y tenga la mejor experiencia posible en el Hospital Ashford.</p>
         </div>
       </div>
       {para_pacientes.map((item)=>(
-        <div className="pl-10 space-y-5 border-l-1 border-gray-300" key={item.id} >
-          <Link key={item.id} to={item.href} className="text-lg">{item.description}</Link>
+        <div className="pl-10 space-y-5 border-l border-gray-400" key={item.id} >
+          <Link key={item.id} to={item.href} className="text-lg text-turquee">{item.description}</Link>
 
           {item.sub_menu.map((subMenu)=>(
-            <div key={subMenu.id}>
-              <Link key={subMenu.id} to={subMenu.href}>{subMenu.description}</Link>
-            </div>
+            <ul key={subMenu.id}>
+              <Links>
+                 <Link key={subMenu.id} to={subMenu.href} className="text-c_text hover:text-turquee">{subMenu.description}</Link>
+              </Links>
+            </ul>
           ))}
         </div>
       ))}

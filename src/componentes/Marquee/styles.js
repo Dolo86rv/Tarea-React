@@ -17,13 +17,15 @@ export const Container=styled.div`
 `
 
 export const Marquee1=styled.div`
-   flex: 0 0 auto;
-   min-width:100%;
-   z-index:1;
-   animation: scroll 30.15s linear 0s infinite;
-   animation-play-state:running;
-   animation-delay:0s;
-   animation-direction:normal;
+    flex: 0 0 auto;
+    min-width:100%;
+    z-index:1;
+    animation-name: marquee;
+    animation: scroll  36,25s linear 0s infinite;
+    animation-duration: 36,25s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
 `
 export const Overlay=styled.div`
     right:0;

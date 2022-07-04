@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        marquee: 'marquee 36.25s linear infinite',
+        marquee: 'marquee 36.25s linear 0s infinite',
       },
       keyframes: {
         marquee: {
@@ -14,6 +14,8 @@ module.exports = {
       },
       colors:{
         'turquee':'#3eb1c8',
+        'bg_menu':'#212529',
+          'c_text':'#27364b',
       }, 
       fontFamily:{
         'Futura-Std':['Futura Std-Book'],
