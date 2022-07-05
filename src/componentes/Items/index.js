@@ -160,11 +160,12 @@ const serviciosEspecialidades_html=()=>{
           <div className="pt-5 pr-5 text-c_text">En el Hospital Ashford ofrecemos una gran diversidad de servicios.</div>
         </div>
         {servicios_especialidades.map((item) => (
-          <div className="pl-10 space-y-5 border-l border-gray-400" key={item.id}>
+          
+          <div className="pl-10 space-y-5 border-l border-gray-400 grid grid-cols-3 capitalize" key={item.id}>
             <Link key={item.id} className="text-lg text-turquee" to={item.href}>{item.description}</Link>
 
             { item.sub_menu.map((sub_item) => (
-              <div key={sub_item.id}>
+              <div key={sub_item.id} className="">
                 <Link key={sub_item.id} to={sub_item.href} className="text-c_text hover:text-turquee">{sub_item.description}</Link >
               </div>
               ))
