@@ -157,7 +157,7 @@ const serviciosEspecialidades_html=()=>{
       <div className="grid grid-cols-3">
         <div>
           <div className="text-2xl text-c_text">Servicios y especialidades</div>
-          <div className="pt-5 pr-5 text-c_text">En el Hospital Ashford ofrecemos una gran diversidad de servicios.</div>
+          <div className="pt-5 pr-5 text-c_text normal-case">En el Hospital Ashford ofrecemos una gran diversidad de servicios.</div>
         </div>
         {servicios_especialidades.map((item) => (
           
@@ -205,7 +205,7 @@ const serviciosEspecialidades_html=()=>{
             <div className="text-2xl text-c_text">
                 Sobre Nostros
             </div>
-            <div className="pt-5 pr-5 text-c_text">
+            <div className="pt-5 pr-5 text-c_text normal-case">
               <p>El hospital Ashford cuenta con una facultad de aproximadamente 250 médicos, 630 empleados, y con 175 camas para atender paciente en prácticamente todas las especialidades.</p>
             </div>
         </div>
@@ -277,7 +277,7 @@ const paraPacientes_html=()=>{
         <div className="text-2xl text-c_text">
               Para Paciente
         </div>
-        <div className="pt-5 pr-5 text-c_text">
+        <div className="pt-5 pr-5 text-c_text normal-case">
           <p>Encuentre guias esenciales para que todo paciente este informado y tenga la mejor experiencia posible en el Hospital Ashford.</p>
         </div>
       </div>

@@ -13,6 +13,7 @@ import { Pagenotfound } from '../Pagenotfound'
 import { Nosotros } from '../Nosotros'
 import { Paciente } from '../Paciente'
 import { Contacto } from '../Contacto'
+import { Emergencia } from '../Emergencia'
 
 
 export const Layout = () => {
@@ -30,7 +31,7 @@ export const Layout = () => {
                   <Route exact path="/servicios" element={<Servicios />} />
                   <Route exact path="/especialidades" element={<Especialidades />} />
                   <Route exact path="/sobrenosotros" element={<Nosotros />} />
-                  <Route exact path="/salaemergencia" element={<Especialidades />} />
+                  <Route exact path="/salaemergencia" element={<Emergencia />} />
                   <Route exact path="/parapacientes" element={<Paciente />} />
                   <Route exact path="/contacto" element={<Contacto />} />
                   <Route path="*" element={<Pagenotfound />} />

@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 export const Marquee = () => {
   const colorDiv={background:'#3eb1c8'};
   return (
