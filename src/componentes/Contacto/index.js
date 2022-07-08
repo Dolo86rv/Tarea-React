@@ -8,7 +8,7 @@ export const Contacto = () => {
       return(
         <Container>
           <Seccion1>
-            <p className=" block mt-0 text-sml tracking-widest font-bold text-turquee mb-4 uppercase justify-items-start">contacta</p>
+            <p className="block mt-0 text-sml tracking-widest font-bold text-turquee mb-4 uppercase justify-items-start">contacta</p>
             <p className="text-5xl tracking-normal text-c_text mb-0 mt-0 justify-items-start">Contacta con Ashford</p>
           </Seccion1>
           <Seccion2>

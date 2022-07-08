@@ -9,10 +9,6 @@ transition: all ease 0.6s;
   transform: scale(1.2);
   color:#3eb1c8;
 }
-img{
-  width:18px;
-  height:18px;
-}
 `
 export const Links = styled.div`
 color:#27364b;
@@ -42,6 +38,9 @@ line-height: 20px;
   color:#3eb1c8;
   text-transform: none;
 }
+`
+export const Form=styled.div`
+
 `
 
 

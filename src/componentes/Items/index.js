@@ -2,6 +2,7 @@ import React from 'react'
 import { HashLink as Link } from 'react-router-hash-link'
 
 import lupa from '../../img/lupa.svg'
+import menu from '../../img/menu.svg'
 import { Links, Lupa, Simple } from './styles'
 
 
@@ -298,29 +299,61 @@ const paraPacientes_html=()=>{
     )
   
     }
+
 export const Items = () => {
   return(
-    <div className="flex flex-row-reverse space-x-6">
-         <Lupa>
-            <img className="ml-10 mt-2" src= {lupa} alt='search'></img>
-          </Lupa>
-          <Simple>
-             <Link to="/contacto" className="p-2">Contacto</Link>
-          </Simple>
-          <Links>
+    <div className="flex flex-row-reverse space-x-2">
+        <div className="flex lg:hidden justify-end">
+         <button class="flex cursor-pointer border border-turquee text-xl bg-transparent" aria-label="Search">
+            <form role="search" action="/resultados" method="get" autocomplete="off" className="flex items-center pl-2 pr-0 pt-2 pb-2 mx-0">
+               <Lupa>
+                <img className="mx-2 py-1" src= {lupa} width="20" height="20" alt='search'></img>
+               </Lupa>
+               <div className="flex">
+                  <input type="text" value="" id="search" placeholder="Buscar" name="s" className="box-border mx-2 border-0 w-full"></input>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#01426A" className="animated-icon mx-2 py-1"><path d="M13.41,12l6.3-6.29a1,1,0,1,0-1.42-1.42L12,10.59,5.71,4.29A1,1,0,0,0,4.29,5.71L10.59,12l-6.3,6.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l6.29,6.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"></path></svg>
+                </div> 
+            </form>
+          </button>
+          <button>
+             <Lupa>
+                <img className="mx-4 mt-2" src= {menu} width="24" height="24" alt='menu'></img>
+             </Lupa>   
+          </button>
+        </div>
+        
+         <Lupa className="hidden lg:block">
+            <img className="ml-10 mt-2" src= {lupa} width="18" height="18" alt='search'></img>
+         </Lupa>
+         <Simple className="hidden lg:block">
+           <Link to="/contacto" className="p-2">Contacto</Link>
+         </Simple>
+         <Links className="hidden lg:block">
            <Item title="Sobre nosotros" subMenu={sobreNosotros_html()}></Item>
-          </Links>
-          <Links>
+         </Links>
+         <Links className="hidden lg:block">
            <Item title="Para pacientes" subMenu={paraPacientes_html()}></Item>
           </Links>
-           <Simple>
+          <Simple className="hidden lg:block">
              <Link to="/salaemergencia" className="p-2">Sala de emergencia</Link>
           </Simple>
-          <Links>
+          <Links className="hidden lg:block">
            <Item title="Servicios y especialidades" subMenu={serviciosEspecialidades_html()}></Item>
           </Links>
-       </div>
+      </div>
   )
 }
 
+/*<div className="flex box-border my-1 items-center">
+        <form role="search" action="/resultados" method="get" autocomplete="off" className="flex items-end p-2 transition-all w-full">
+            <Lupa>
+                <img className="ml-10 mt-2" src= {lupa} width="18" height="18" alt='search'></img>
+            </Lupa>
+            <div className="flex">
+              <input type="text" value="" id="header-search" placeholder="Buscar" name="s" className="border border-turquee text-xl bg-transparent"></input>
+               <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="#01426A" className="animated-icon mx-1"><path d="M13.41,12l6.3-6.29a1,1,0,1,0-1.42-1.42L12,10.59,5.71,4.29A1,1,0,0,0,4.29,5.71L10.59,12l-6.3,6.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l6.29,6.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"></path></svg>
+              
+            </div>
+         </form>
+         </div>*/
 

@@ -2,6 +2,7 @@ import React from 'react'
 import {Container, Seccion1, Seccion2, Arrow, Box} from './styles';
 import fondo from '../../img/info-background.png'
 import arrow_down from '../../img/arrow_down.svg'
+import { Footer } from '../Footer';
 
 export const Home = () => {
   
@@ -44,6 +45,9 @@ export const Home = () => {
             </Box>
          </div>
     </Seccion2>  
+    <Footer>
+      <p> footer</p>
+    </Footer>
     </>
   )
 }

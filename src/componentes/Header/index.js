@@ -9,9 +9,9 @@ export const Header = () => {
     return (
     <Container>
       <div className="flex pt-3 pb-3 relative">
-        <div className="flex-none">
+        <div className="flex-none sm:align-middle">
           <Link className="text-lg" to="/">
-             <img src= {logo} alt='logo' width={104} height={40}></img>
+             <img className="" src= {logo} alt='logo' width={104} height={40}></img>
            </Link>
         </div>
         <div className="flex-auto pt-1">

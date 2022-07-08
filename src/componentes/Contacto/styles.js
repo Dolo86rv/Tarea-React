@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
 export const Container=styled.div`
-  display:absolute;
   margin-left:auto;
   margin-top:auto;
   overflow-y:auto;
-  padding-top:16px;
+  padding:0;
   width:100%;
   background-color:var(--fondo1);
 `
