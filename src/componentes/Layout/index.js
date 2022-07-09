@@ -8,7 +8,6 @@ import { Servicios } from '../Servicios'
 import { Especialidades } from '../Especialidades'
 import { Footer } from '../Footer'
 import { Marquee } from '../Marquee'
-import { Container, Wrapper} from './styles' 
 import { Pagenotfound } from '../Pagenotfound'
 import { Nosotros } from '../Nosotros'
 import { Paciente } from '../Paciente'
@@ -19,14 +18,12 @@ import { Emergencia } from '../Emergencia'
 export const Layout = () => {
   
   return (
-    <div>
-        <Container>
+      <div className="flex flex-col h-screen w-full">
           <BrowserRouter>
             <Header />
-            <Wrapper>
-            <Marquee />
-              <div className="">
-                <Routes>
+            <div className="flex-grow w-full">
+              <Marquee />
+               <Routes>
                   <Route exact path="/" element={<Home />} />
                   <Route exact path="/servicios" element={<Servicios />} />
                   <Route exact path="/especialidades" element={<Especialidades />} />
@@ -36,11 +33,10 @@ export const Layout = () => {
                   <Route exact path="/contacto" element={<Contacto />} />
                   <Route path="*" element={<Pagenotfound />} />
                 </Routes>
-              </div>
-            <Footer />
-            </Wrapper>
+            </div>
+             <Footer />
           </BrowserRouter>
-        </Container>
-      </div>
+       </div>
+
   )
 }

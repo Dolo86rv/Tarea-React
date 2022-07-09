@@ -303,6 +303,7 @@ const paraPacientes_html=()=>{
 export const Items = () => {
   return(
     <div className="flex flex-row-reverse space-x-2">
+        
         <div className="flex lg:hidden justify-end">
          <button class="flex cursor-pointer border border-turquee text-xl bg-transparent" aria-label="Search">
             <form role="search" action="/resultados" method="get" autocomplete="off" className="flex items-center pl-2 pr-0 pt-2 pb-2 mx-0">
@@ -315,13 +316,28 @@ export const Items = () => {
                 </div> 
             </form>
           </button>
-          <button>
-             <Lupa>
-                <img className="mx-4 mt-2" src= {menu} width="24" height="24" alt='menu'></img>
-             </Lupa>   
-          </button>
+
         </div>
         
+        <div className="bg-gray-100 flex flex-col sm:hidden">
+           <div className="px-2 pt-2 pb-3 space-x-2"> 
+              <Link className="bg-gray-400" to="/servicios">
+                Servicios y especialidades
+              </Link>
+              <Link className="bg-gray-400" to="/salaemergencia">
+                Sala de emergencia
+              </Link>
+              <Link className="bg-gray-400" to="/parapacientes">
+                Para pacientes
+              </Link>
+              <Link className="bg-gray-400" to="/sobrenosotros">
+                Sobre nosotros
+              </Link>
+              <Link className="bg-gray-300" to="/contacto">
+                Contacto
+              </Link>
+            </div>
+         </div>
          <Lupa className="hidden lg:block">
             <img className="ml-10 mt-2" src= {lupa} width="18" height="18" alt='search'></img>
          </Lupa>
@@ -344,7 +360,7 @@ export const Items = () => {
   )
 }
 
-/*<div className="flex box-border my-1 items-center">
+/*    <div className="flex box-border my-1 items-center">
         <form role="search" action="/resultados" method="get" autocomplete="off" className="flex items-end p-2 transition-all w-full">
             <Lupa>
                 <img className="ml-10 mt-2" src= {lupa} width="18" height="18" alt='search'></img>
@@ -355,5 +371,13 @@ export const Items = () => {
               
             </div>
          </form>
-         </div>*/
+         </div>
+
+         <button>
+             <Lupa>
+                <img className="mx-4 mt-2" src= {menu} width="24" height="24" alt='menu'></img>
+             </Lupa>   
+          </button>
+         
+         */
 

@@ -7,8 +7,8 @@ import { HashLink as Link } from 'react-router-hash-link';
 export const Header = () => {
    
     return (
-    <Container>
-      <div className="flex pt-3 pb-3 relative">
+    <header className="fixed inset-x-0 justify-end bg-white pl-20 pr-20 z-50">
+      <div className="flex pt-3 pb-3">
         <div className="flex-none sm:align-middle">
           <Link className="text-lg" to="/">
              <img className="" src= {logo} alt='logo' width={104} height={40}></img>
@@ -19,6 +19,6 @@ export const Header = () => {
           </Items >
         </div>
       </div>
-    </Container>
+    </header>
   )
 }

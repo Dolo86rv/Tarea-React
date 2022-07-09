@@ -4,6 +4,7 @@ export default createGlobalStyle`
 
 :root{
     --fondo:#eff3f8;
+    --fondo1:#f4f4f7;
     --div1: #3eb1c8;
     --toolbox:#212529;
 
@@ -57,7 +58,7 @@ export default createGlobalStyle`
     --line-height-16: 80px
  }
 html{
-   background-color:var(--fondo);
+   background-color:var(--fondo1);
    min-height:100%;
 }
 *{

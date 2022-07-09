@@ -7,8 +7,9 @@ export const Container=styled.div`
 `
 export const Seccion1=styled.div`
      margin:0 auto;
-     mi-height:100%;
+     height:calc(100vh-66px);
      width:100%;
+     display:grid;
      
 ` 
 export const Arrow=styled.div`
@@ -22,8 +23,8 @@ export const Arrow=styled.div`
 `
 export const Seccion2=styled.div`
      width:100%;
-     display:block;
-     
+     height:500px;
+     padding:64px 16px 48px 16px;  
 ` 
 export const Box=styled.div`
      

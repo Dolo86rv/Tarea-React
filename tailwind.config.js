@@ -12,19 +12,20 @@ module.exports = {
           '100%': { transform: 'translateX(-100%)' },
         },
       },
-      fontSize: {
-        'sml': '0.625rem',
-        'sm':'0.875rem',
-      },
       colors:{
         'turquee':'#3eb1c8',
         'bg_menu':'#212529',
         'c_text':'#27364b',
         'c_background':'#f6f8fc',
         'c_footer':'#002554',
+        'bg_gray':'#6c757d',
+        'bg_box':'#f4f4f7',
       }, 
       fontFamily:{
         'Futura-Std':['Futura Std-Book'],
+      },
+      fontSize: {
+        'xl':['32px','40px'],
       },
       letterSpacing: {
          widest: '.13em',

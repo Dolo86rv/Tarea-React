@@ -6,9 +6,9 @@ import { Layout } from './componentes/Layout';
 class App extends Component{
   render(){
     return <div>
-    <Layout />
-    <GlobalStyles />
- </div>
+       <Layout />
+       <GlobalStyles /> 
+    </div>
   }
 }
 

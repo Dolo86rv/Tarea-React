@@ -6,6 +6,7 @@ export const Container=styled.div`
 `
 export const Wrapper=styled.div`
      margin:0 auto; 
+     
 
 `
 
