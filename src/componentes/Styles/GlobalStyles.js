@@ -60,6 +60,7 @@ export default createGlobalStyle`
 html{
    background-color:var(--fondo1);
    min-height:100%;
+   box-sizing: border-box;
 }
 *{
    padding:0;

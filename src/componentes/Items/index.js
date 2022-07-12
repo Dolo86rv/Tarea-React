@@ -304,40 +304,19 @@ export const Items = () => {
   return(
     <div className="flex flex-row-reverse space-x-2">
         
-        <div className="flex lg:hidden justify-end">
-         <button class="flex cursor-pointer border border-turquee text-xl bg-transparent" aria-label="Search">
-            <form role="search" action="/resultados" method="get" autocomplete="off" className="flex items-center pl-2 pr-0 pt-2 pb-2 mx-0">
+        <div className="flex lg:hidden md:justify-end">
+         <button class="flex cursor-pointer text-xl bg-transparent" aria-label="Search">
                <Lupa>
-                <img className="mx-2 py-1" src= {lupa} width="20" height="20" alt='search'></img>
+                <img className="mx-4 mt-2" src= {lupa} width="24" height="24" alt='search'></img>
                </Lupa>
-               <div className="flex">
-                  <input type="text" value="" id="search" placeholder="Buscar" name="s" className="box-border mx-2 border-0 w-full"></input>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#01426A" className="animated-icon mx-2 py-1"><path d="M13.41,12l6.3-6.29a1,1,0,1,0-1.42-1.42L12,10.59,5.71,4.29A1,1,0,0,0,4.29,5.71L10.59,12l-6.3,6.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l6.29,6.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"></path></svg>
-                </div> 
-            </form>
           </button>
-
+          <button class="flex cursor-pointer text-xl bg-transparent" aria-label="toggle">
+             <Lupa>
+                <img className="mx-4 mt-2" src= {menu} width="24" height="24" alt='menu'></img>
+             </Lupa>   
+          </button>
         </div>
-        
-        <div className="bg-gray-100 flex flex-col sm:hidden">
-           <div className="px-2 pt-2 pb-3 space-x-2"> 
-              <Link className="bg-gray-400" to="/servicios">
-                Servicios y especialidades
-              </Link>
-              <Link className="bg-gray-400" to="/salaemergencia">
-                Sala de emergencia
-              </Link>
-              <Link className="bg-gray-400" to="/parapacientes">
-                Para pacientes
-              </Link>
-              <Link className="bg-gray-400" to="/sobrenosotros">
-                Sobre nosotros
-              </Link>
-              <Link className="bg-gray-300" to="/contacto">
-                Contacto
-              </Link>
-            </div>
-         </div>
+      
          <Lupa className="hidden lg:block">
             <img className="ml-10 mt-2" src= {lupa} width="18" height="18" alt='search'></img>
          </Lupa>
@@ -373,11 +352,33 @@ export const Items = () => {
          </form>
          </div>
 
-         <button>
-             <Lupa>
-                <img className="mx-4 mt-2" src= {menu} width="24" height="24" alt='menu'></img>
-             </Lupa>   
-          </button>
-         
+         <div className="bg-gray-100 flex flex-col sm:hidden">
+           <div className="px-2 pt-2 pb-3 space-x-2"> 
+              <Link className="bg-gray-400" to="/servicios">
+                Servicios y especialidades
+              </Link>
+              <Link className="bg-gray-400" to="/salaemergencia">
+                Sala de emergencia
+              </Link>
+              <Link className="bg-gray-400" to="/parapacientes">
+                Para pacientes
+              </Link>
+              <Link className="bg-gray-400" to="/sobrenosotros">
+                Sobre nosotros
+              </Link>
+              <Link className="bg-gray-300" to="/contacto">
+                Contacto
+              </Link>
+            </div>
+         </div>
+         <form role="search" action="/resultados" method="get" autocomplete="off" className="flex items-center pl-2 pr-0 pt-2 pb-2 mx-0">
+               <Lupa>
+                <img className="mx-2 py-1" src= {lupa} width="20" height="20" alt='search'></img>
+               </Lupa>
+               <div className="flex">
+                  <input type="text" value="" id="search" placeholder="Buscar" name="s" className="box-border mx-2 border-0 w-full"></input>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#01426A" className="animated-icon mx-2 py-1"><path d="M13.41,12l6.3-6.29a1,1,0,1,0-1.42-1.42L12,10.59,5.71,4.29A1,1,0,0,0,4.29,5.71L10.59,12l-6.3,6.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l6.29,6.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"></path></svg>
+                </div> 
+            </form>
          */
 

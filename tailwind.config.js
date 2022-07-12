@@ -12,6 +12,9 @@ module.exports = {
           '100%': { transform: 'translateX(-100%)' },
         },
       },
+      width: {
+        'fit': 'fit-content',
+      },
       colors:{
         'turquee':'#3eb1c8',
         'bg_menu':'#212529',
@@ -20,6 +23,7 @@ module.exports = {
         'c_footer':'#002554',
         'bg_gray':'#6c757d',
         'bg_box':'#f4f4f7',
+        'c_border':'#cbd4e',
       }, 
       fontFamily:{
         'Futura-Std':['Futura Std-Book'],
@@ -37,6 +41,7 @@ module.exports = {
     screens: {
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
+      'ssm':'330px',
 
       'md': '768px',
       // => @media (min-width: 768px) { ... }
