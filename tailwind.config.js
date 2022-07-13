@@ -42,13 +42,15 @@ module.exports = {
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
       'ssm':'330px',
+      '1sm':'572px',
 
       'md': '768px',
       // => @media (min-width: 768px) { ... }
 
       'lg': '991px',
       // => @media (min-width: 991px) { ... }
-
+      '1lg':'1024px',
+      
       'xl': '1280px',
       // => @media (min-width: 1280px) { ... }
 
