@@ -1,10 +1,5 @@
 import styled from "styled-components";
 
-export const Container=styled.div`
-     display:flex;
-     margin-top:0px;
-     mi-height:100%;
-`
 export const Seccion1=styled.div`
      margin:0 auto;
      height:calc(100vh-66px);
@@ -17,7 +12,7 @@ export const Arrow=styled.div`
    color:#ffffff;
    cursor:pointer;
     &:hover {
-     -webkit-transform: scale(1.2);
+     -webkit-transform: scale(1.1);
      transform: scale(1.1);
      color:#ffffff;
 `

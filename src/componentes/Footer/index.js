@@ -3,11 +3,12 @@ import Logo from '../../img/ashford-logo-white.svg'
 import { HashLink as Link } from 'react-router-hash-link'
 
 export const Footer = () => {
+
   return (
     <footer className="bg-c_footer w-full" >
       
-      <div className="grid grid-cols-3 gap-1 border-l border-blue-400 w-full mb-14">
-          <div className="mt-16 ml-28 w-80">
+      <div className="grid grid-cols-4 gap-1 w-full mb-14">
+          <div className="mt-16 ml-28 mr-0">
             <img src={Logo} width={147} height={56} alt="logo_footer"></img>
             <p className="text-lg font-medium text-white pt-8">Ashford Hospital</p>
             <p className="text-white">
@@ -64,18 +65,76 @@ export const Footer = () => {
             </div>
           </div>
           
-          <div className="mt-16">
-            <p  className="text-2xl font-medium text-turquee pb-4">Servicios y especialidades</p>
-            <div  className=" grid grid-cols-2 text-white">
-                <div className="pb-2 hover:text-turquee font-medium text-sm">
+          
+          <div className="col-span-2 justify-center text-white mt-16 ml-4 pl-8 border-l border-c_sea">
+              <div className="col-span-2">
+                 <p className="text-2xl font-medium text-turquee pb-4">Servicios y especialidades</p>
+              </div>
+             <div className="grid grid-cols-2 gap-1">
+               <div className="py-1 hover:text-turquee font-medium text-sm">
                   <Link to="" >Radiología/Centro de imágenes</Link>
                 </div>
-                
-                
-            </div>
-          </div>
+                <div className="py-1 hover:text-turquee font-medium text-sm">
+                <Link to="">Unidad de cuidado intensivo neonatal</Link>
+                </div>
+                <div className="py-1 hover:text-turquee font-medium text-sm ">
+                  <Link to="">Medicina nuclear y centro de cardiología</Link>
+                </div> 
+                <div className="py-1 hover:text-turquee font-medium text-sm ">
+                <Link to="">Cirugía colorrectal</Link>
+                </div > 
+                <div className="py-1 hover:text-turquee font-medium text-sm">
+                  <Link to="">Laboratorio</Link>
+                </div> 
+                <div className="py-1 hover:text-turquee font-medium text-sm">
+                <Link to="">Ortopedia</Link>
+               </div> 
+               <div className="pb-1 hover:text-turquee font-medium text-sm">
+                  <Link to="">Centro de medicina física y rehabilitación</Link>
+               </div>
+               <div className="py-1 hover:text-turquee font-medium text-sm pl-1">
+                <Link to="">Medicina deportiva</Link>
+              </div>
+              <div className="py-1 hover:text-turquee font-medium text-sm">
+                  <Link to="">Cuidado de heridas</Link>
+                </div>
+                <div className="py-1 hover:text-turquee font-medium text-sm pl-1">
+                <Link to="">Otorrinolaringologia</Link>
+              </div>
+              <div className="py-1 hover:text-turquee font-medium text-sm">
+                  <Link to="">Ashford Prenatal</Link>
+                </div> 
+                <div className="py-1 hover:text-turquee font-medium text-sm pl-1">
+                <Link to="">Endocrinología</Link>
+              </div>
+              <div className="py-1 hover:text-turquee font-medium text-sm">
+                  <Link to="">Centro de la mujer</Link>
+              </div>
+              <div className="py-1 hover:text-turquee font-medium text-sm pl-1">
+                <Link to="">Cirugía general</Link>
+              </div> 
+              <div className="pb-1 hover:text-turquee font-medium text-sm">
+                  <Link to="">Centro de vacunación</Link>
+                </div>
+                <div className="py-1 hover:text-turquee font-medium text-sm pl-1">
+                <Link to="">Cirugía oncológica</Link>
+              </div> 
+              <div className="py-1 hover:text-turquee font-medium text-sm">
+                  <Link to="">Farmacia de la comunidad</Link>
+                </div> 
+                <div className="py-1 hover:text-turquee font-medium text-sm pl-1">
+                <Link to="">Pediatría</Link>
+              </div> 
+              <div className="py-1 hover:text-turquee font-medium text-sm pl-1">
+                <Link to="">Urología</Link>
+              </div>
+              <div className="py-1 hover:text-turquee font-medium text-sm">
+                  <Link to="">Obstetricia, ginecología y ginecología oncológica</Link>
+                </div>     
+           </div>
+        </div>
           
-          <div className="mt-16 ml-36">
+          <div className="mt-16 border-l border-c_sea pl-8">
             <p className="text-2xl font-medium text-turquee pb-4">Para pacientes</p>
             <div className="flex flex-col text-white">
               <div className="pb-2">
@@ -98,7 +157,7 @@ export const Footer = () => {
           <div className="w-full text-white ml-14 mt-2 text-xs font-medium">
             <p>Copyright © 2022. Ashford Hospital</p>
           </div> 
-          <div className="col-span-2 text-xs text-white pt-2 justify-end font-medium">
+          <div className="col-span-3 ml-96 text-xs text-white pt-2 font-medium">
               <a href="" className=" underline hover:text-turquee"><span className="mr-4">Lista comprensiva de cargos del Hospital Ashford</span></a>
               <a href="" className="underline hover:text-turquee"><span className="mr-4 ">Política de privacidad</span></a>
               <a href="" className="underline hover:text-turquee"><span className="mr-4 ">Política de conflictos de interés</span></a>  
@@ -113,62 +172,24 @@ export const Footer = () => {
 
 /*
                 
-               <div className="pb-2 hover:text-turquee font-medium text-sm">
-                  <Link>Medicina nuclear y centro de cardiología</Link>
-                </div> 
-                <div className="pb-2 hover:text-turquee font-medium text-sm">
-                  <Link>Laboratorio</Link>
-                </div> 
-                <div className="pb-2 hover:text-turquee font-medium text-sm">
-                  <Link>Centro de medicina física y rehabilitación</Link>
-                </div>
+               
+                
+                
 
-             <div className="pb-2 hover:text-turquee font-medium text-sm">
-                  <Link>Cuidado de heridas</Link>
-                </div>
-                <div className="pb-2 hover:text-turquee font-medium text-sm">
-                  <Link>Ashford Prenatal</Link>
-                </div> 
-                <div className="pb-2 hover:text-turquee font-medium text-sm">
-                  <Link>Centro de la mujer</Link>
-                </div> 
-                <div className="pb-2 hover:text-turquee font-medium text-sm">
-                  <Link>Centro de vacunación</Link>
-                </div>
-                <div className="pb-2 hover:text-turquee font-medium text-sm">
-                  <Link>Farmacia de la comunidad</Link>
-                </div> 
-                <div className="pb-2 hover:text-turquee font-medium text-sm">
-                  <Link>Obstetricia, ginecología y ginecología oncológica</Link>
-                </div>      
+                
+                
+                
+                
+               
+                      
               
-             <div clasName="pb-2 hover:text-turquee font-medium text-sm">
-                <Link>Unidad de cuidado intensivo neonatal</Link>
-              </div>
-              <div>
-                <Link>Cirugía colorrectal</Link>
-              </div> 
-              <div>
-                <Link>Ortopedia</Link>
-              </div> 
-              <div>
-                <Link>Medicina deportiva</Link>
-              </div>
-              <div>
-                <Link>Otorrinolaringologia</Link>
-              </div>
-              <div>
-                <Link>Endocrinología</Link>
-              </div> 
-              <div>
-                <Link>Cirugía general</Link>
-              </div> 
-              <div>
-                <Link>Cirugía oncológica</Link>
-              </div>
-              <div>
-                <Link>Pediatría</Link>
-              </div> 
-              <div>
-                <Link>Urología</Link>
-              </div>      */
+             
+              
+              
+              
+              
+              
+              
+              
+              
+               */

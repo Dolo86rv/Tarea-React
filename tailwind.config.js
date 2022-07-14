@@ -24,6 +24,7 @@ module.exports = {
         'bg_gray':'#6c757d',
         'bg_box':'#f4f4f7',
         'c_border':'#cbd4e',
+        'c_sea':'#3eb1c81a',
       }, 
       fontFamily:{
         'Futura-Std':['Futura Std-Book'],

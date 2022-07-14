@@ -162,7 +162,7 @@ const serviciosEspecialidades_html=()=>{
         </div>
         {servicios_especialidades.map((item) => (
           
-          <div className=" pl-8 pr-8 space-y-2 border-l border-gray-400 borde grid grid-cols-2 capitalize gap-1" key={item.id}>
+          <div className="pl-8 pr-8 space-y-2 border-l border-gray-400 grid grid-cols-2 capitalize gap-1" key={item.id}>
             <div className="col-span-2">
                <Link key={item.id} className="text-lg text-turquee" to={item.href}>{item.description}</Link>
              </div>
