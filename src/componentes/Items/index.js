@@ -302,15 +302,15 @@ const paraPacientes_html=()=>{
 
 export const Items = () => {
   return(
-    <div className="flex flex-row-reverse space-x-2">
+    <div className="flex flex-col md:flex-row-reverse space-x-2 ">
         
-        <div className="flex lg:hidden md:justify-end">
-         <button class="flex cursor-pointer text-xl bg-transparent" aria-label="Search">
+        <div className="items-end sm:items-end lg:hidden">
+         <button class="cursor-pointer text-xl bg-transparent" aria-label="Search">
                <Lupa>
                 <img className="mx-4 mt-2" src= {lupa} width="24" height="24" alt='search'></img>
                </Lupa>
           </button>
-          <button class="flex cursor-pointer text-xl bg-transparent" aria-label="toggle">
+          <button class="cursor-pointer text-xl bg-transparent" aria-label="toggle">
              <Lupa>
                 <img className="mx-4 mt-2" src= {menu} width="24" height="24" alt='menu'></img>
              </Lupa>   

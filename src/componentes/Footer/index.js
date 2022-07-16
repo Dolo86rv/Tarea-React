@@ -7,8 +7,8 @@ export const Footer = () => {
   return (
     <footer className="bg-c_footer w-full" >
       
-      <div className="grid grid-cols-4 gap-1 w-full mb-14">
-          <div className="mt-16 ml-28 mr-0">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 w-full mb-14">
+          <div className="mt-16 ml mr-0 sm:ml-10 md:ml-14">
             <img src={Logo} width={147} height={56} alt="logo_footer"></img>
             <p className="text-lg font-medium text-white pt-8">Ashford Hospital</p>
             <p className="text-white">
@@ -65,12 +65,11 @@ export const Footer = () => {
             </div>
           </div>
           
-          
           <div className="col-span-2 justify-center text-white mt-16 ml-4 pl-8 border-l border-c_sea">
               <div className="col-span-2">
                  <p className="text-2xl font-medium text-turquee pb-4">Servicios y especialidades</p>
               </div>
-             <div className="grid grid-cols-2 gap-1">
+             <div className="grid grid-cols-1 md:grid-cols-2 md:col-start-1 gap-1">
                <div className="py-1 hover:text-turquee font-medium text-sm">
                   <Link to="" >Radiología/Centro de imágenes</Link>
                 </div>
@@ -132,9 +131,9 @@ export const Footer = () => {
                   <Link to="">Obstetricia, ginecología y ginecología oncológica</Link>
                 </div>     
            </div>
-        </div>
+          </div>
           
-          <div className="mt-16 border-l border-c_sea pl-8">
+          <div className="mt-16 border-0 border-c_sea pl-8 sm:ml-2 md:ml-2 md:border-l">
             <p className="text-2xl font-medium text-turquee pb-4">Para pacientes</p>
             <div className="flex flex-col text-white">
               <div className="pb-2">

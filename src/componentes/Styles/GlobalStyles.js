@@ -11,11 +11,19 @@ export default createGlobalStyle`
     --white: #ffffff;
     --white1: #f4f4f7;
      
-    --blue: #3eb1c8;
+    --turquee: #3eb1c8;
     --blue1: #01426a;
     --blue2: #3eb1c8;
-    --blue3:#002554;
-    --gris_fondo:#f6f8fc;
+    --blue-footer:#002554;
+    --gray-fondo:#f6f8fc;
+    --blue-text: #27364b;
+    --bg-gray: #6c757d;
+    --c-border: #cbd4e;
+    --c-sea: #3eb1c81a;
+    --c-ashford:#01426a;
+    --c-service: #c3d4e6;
+
+    --tw-shadow: 0 0px 30px rgba(112, 144, 176, 0.2);
 
     --font-family-primary: Futura Std;
     --font-family-secondary: Untitled Sans;

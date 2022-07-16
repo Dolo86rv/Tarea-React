@@ -13,7 +13,7 @@ module.exports = {
         },
       },
       width: {
-        'fit': 'fit-content',
+        'fit':'fit-content',
       },
       colors:{
         'turquee':'#3eb1c8',
@@ -25,7 +25,13 @@ module.exports = {
         'bg_box':'#f4f4f7',
         'c_border':'#cbd4e',
         'c_sea':'#3eb1c81a',
+        'bg_gray2':'#eff3f8',
+        'ashford':'#01426a',
+        'service':'#c3d4e6',
       }, 
+      boxShadow: {
+        '3xl': '0 0px 30px rgba(112, 144, 176, 0.2)',
+      },
       fontFamily:{
         'Futura-Std':['Futura Std-Book'],
       },
