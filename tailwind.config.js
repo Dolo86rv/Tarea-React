@@ -28,6 +28,7 @@ module.exports = {
         'bg_gray2':'#eff3f8',
         'ashford':'#01426a',
         'service':'#c3d4e6',
+        'c_box':'#8994a7',
       }, 
       boxShadow: {
         '3xl': '0 0px 30px rgba(112, 144, 176, 0.2)',
@@ -37,6 +38,12 @@ module.exports = {
       },
       fontSize: {
         'xl':['32px','40px'],
+         's': ['10px', {
+            lineHeight: '16px',
+          }],
+      },
+      margin: {
+        '34': '140px',
       },
       letterSpacing: {
          widest: '.13em',

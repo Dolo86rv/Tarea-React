@@ -304,7 +304,7 @@ export const Items = () => {
   return(
     <div className="flex flex-col md:flex-row-reverse space-x-2 ">
         
-        <div className="items-end sm:items-end lg:hidden">
+        <div className="items-end lg:hidden">
          <button class="cursor-pointer text-xl bg-transparent" aria-label="Search">
                <Lupa>
                 <img className="mx-4 mt-2" src= {lupa} width="24" height="24" alt='search'></img>

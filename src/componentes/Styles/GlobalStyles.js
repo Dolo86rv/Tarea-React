@@ -22,8 +22,11 @@ export default createGlobalStyle`
     --c-sea: #3eb1c81a;
     --c-ashford:#01426a;
     --c-service: #c3d4e6;
+    --c-box: #CBD4E1;
+    --c-text-box: #8994a7;
 
     --tw-shadow: 0 0px 30px rgba(112, 144, 176, 0.2);
+    --tw-shddow-1: 0px 16px 40px rgba(112, 144, 176, 0.35);
 
     --font-family-primary: Futura Std;
     --font-family-secondary: Untitled Sans;

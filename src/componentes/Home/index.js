@@ -1,5 +1,5 @@
 import React from 'react'
-import {Seccion1, Seccion2 ,Arrow, Box, Box1} from './styles';
+import {Seccion1,Arrow, Box, Box1, Box2, Img} from './styles';
 import fondo from '../../img/info-background.png'
 import arrow_down from '../../img/arrow_down.svg'
 import Indice from '../../img/indice.svg'
@@ -24,53 +24,81 @@ export const Home = () => {
                   </Arrow>
                </div>
             </Seccion1>
-            <div>
+            <div className="w-full mt-16">
                <p className="text-2xl block static z-auto mt-11 text-c_footer text-center font-normal sm:text-4xl">¡Saludos! ¿Cómo podríamos ayudarle?</p>
-                  <div className="pt-14 pb-14 flex flex-wrap min-h-full justify-center">
-                      <div className="bg-gray-50 border border-solid border-gray-300 rounded shadow-lg px-4 py-2 m-2 h-80 w-72">
-                         <div className="pt-12 pb-12 pl-12 items-center ">
-                           <img src={Indice} alt='indice' width={20} height={20} ></img>
-                           <p>hola</p>
-                           <p></p>
-                         </div>
-                      </div>
-                      <div className="bg-gray-50 border border-solid border-gray-300 rounded shadow-lg px-4 py-2 m-2 h-80 w-72">
-                      <div>
-                           <img src={Indice2} alt='indice' width={20} height={20}></img>
-                           <p>hola</p>
-                           <p></p>
-                         </div>
-                      </div>
-                      <div className="bg-gray-50 border border-solid border-gray-300 rounded shadow-lg px-4 py-2 m-2 h-80 w-72">
-                      <div>
-                           <img src={Indice3} alt='indice' width={20} height={20}></img>
-                           <p>hola</p>
-                           <p></p>
-                         </div>
-                      </div>
-                      <div className="bg-gray-50 border border-solid border-gray-300 rounded shadow-lg px-4 py-2 m-2 h-80 w-72">
-                      <div className="">
-                           <img src={Indice4} alt='indice' width={20} height={20}></img>
-                           <p>hola</p>
-                           <p></p>
-                         </div>
-                      </div>
+                  <div className="flex flex-wrap min-h-full justify-center items-stretch py-12 px-20">
+                      <Box2>
+                           <img className="ml-32" src={Indice} alt='indice-1' width={20} height={20} ></img>
+                           <p className="my-6 text-lg text-c_footer font-normal not-italic text-center">¿Necesitas estar ingresado para utilizar los servicios del hospital?</p>
+                           <p className=" mb-4 mt-0 text-sm text-c_box items-center font-normal not-italic text-center">Nuestros servicios - incluyendo laboratorios, centro de imágenes, cuidado de heridas - están disponibles para el público en general.</p>
+                      </Box2>
+                      <Box2>
+                           <img className="ml-32" src={Indice2} alt='indice-2' width={20} height={20}></img>
+                           <p className="my-6 text-lg text-c_footer font-normal not-italic text-center">¿Cómo hacer citas con nuestros médicos?</p>
+                           <p className=" mb-4 mt-0 text-sm text-c_box items-center font-normal not-italic text-center">Citas con nuestra facultad médica se hacen a través de sus oficinas, favor referirse al directorio médico para información de contacto.</p>
+                     </Box2>
+                      <Box2>
+                           <img className="ml-32" src={Indice3} alt='indice-3' width={20} height={20}></img>
+                           <p className="my-6 text-lg text-c_footer font-normal not-italic text-center">¿Qué constituye una emergencia médica?</p>
+                           <p className=" mb-4 mt-0 text-sm text-c_box items-center font-normal not-italic text-center">Se considera una emergencia toda condición que podría resultar en daño a las funciones corporales, a un órgano corporal o a la salud del individuo.</p>
+                     </Box2>
+                     <Box2>
+                           <img className="ml-32" src={Indice4} alt='indice-4' width={20} height={20}></img>
+                           <p className="my-6 text-lg text-c_footer font-normal not-italic text-center">¿Qué tengo que saber antes de mi operación?</p>
+                           <p className=" mb-4 mt-0 text-sm text-c_box items-center font-normal not-italic text-center">Visite la sección de “Admisiones” donde encontrará toda información, en adición a un listado detallado de los requisitos necesarios antes de ser admitido.</p>
+                     </Box2>
                   </div>
-            </div>
+             </div>
             <div className="w-full bg-ashford">
-               <div className="flex ml-auto mr-auto">
-                  <div className="relative overflow-hidden mt-4 ml-28 rounded-md">
+               <div className="flex flex-row flex-wrap justify-center min-h-full">
+                  <Img>
                      <img src={Interest}></img>
-                  </div>
-                  <div className="justify-end">
-                     <p className="font-normal text-xl text-turquee uppercase">Datos de interés</p>
+                  </Img>
+                  <div className="flex flex-col flex-1 mt-14 ml-12 mr-28 h-96">
+                     <p className="font-bold space-x-5 text-s text-turquee uppercase">Datos de interés</p>
+                     <p>¡En el Hospital Ashford estamos para servirles!</p>
+                     <p>Nuestra misión es proveer servicios médicos hospitalarios de excelencia con calor humano con empatía y compasión</p>
+                     <div className="grid grid-cols-2">
+                        <div>
+                           <div>
+                              <p>118</p>
+                           </div>
+                           <div>
+                              <p>Años de servicio a la comunidad</p>
+                           </div>
+                        </div>
+                        <div>
+                           <div>
+                              <p>300</p>
+                           </div>
+                           <div>
+                              <p>Vidas de bebés salvadas al año en  nuestro NICU Nivel 3</p>
+                           </div>
+                        </div>
+                        <div>
+                           <div>
+                              <p>#1</p>
+                           </div>
+                           <div>
+                              <p>La clínica colorrectal más completa de Puerto Rico</p>
+                           </div>
+                        </div>
+                        <div>
+                           <div>
+                              <p>#1</p>
+                           </div>
+                           <div>
+                              <p>#1 en partos en Hospital Privado en Puerto Rico</p>
+                           </div>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
             <div className=" max-w-full bg-white">
                <div className="flex flex-col ml-auto mr-auto">
                   <p className="text-center text-c_footer font-normal text-xl not-italic py-4">Especialidades</p>
-                  <div className="flex flex-wrap flex-col justify-center items-center md:flex-row min-h-full py-10 mx-4">
+                  <div className="flex flex-wrap flex-col justify-center items-center md:flex-row min-h-full">
                      <Link className="block w-48 h-36 pb-3" to="/especialidades#obstetricia_ginecología_ginecología_oncológica">
                            <Box1>
                               <p className="not-italic font-normal leading-6 text-center text-bg_gray2 m-0">OB-G</p>
@@ -159,7 +187,6 @@ export const Home = () => {
                               <p className="not-italic font-normal text-c_footer py-4 text-center text-sm">Urología</p>
                            </div>
                      </Link>
-
                   </div>
                </div>
             </div>
