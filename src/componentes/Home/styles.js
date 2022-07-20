@@ -59,10 +59,11 @@ export const Box2=styled.div`
 `
 export const Img=styled.div`
      width:514px;
-     height:560px;
+     min-height:100%;
      position:relative;
      overflow:hidden;
      margin-top:48px;
+     margin-bottom:60px;
      margin-left:112px;
      border-radius:6px;
 `

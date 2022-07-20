@@ -52,47 +52,54 @@ export const Home = () => {
             <div className="w-full bg-ashford">
                <div className="flex flex-row flex-wrap justify-center min-h-full">
                   <Img>
-                     <img src={Interest}></img>
+                     <img src={Interest} width={514} height={560}></img>
                   </Img>
-                  <div className="flex flex-col flex-1 mt-14 ml-12 mr-28 h-96">
+                  <div className="flex flex-col flex-1 mt-14 ml-12 mr-28  min-h-full">
                      <p className="font-bold space-x-5 text-s text-turquee uppercase">Datos de interés</p>
-                     <p>¡En el Hospital Ashford estamos para servirles!</p>
-                     <p>Nuestra misión es proveer servicios médicos hospitalarios de excelencia con calor humano con empatía y compasión</p>
-                     <div className="grid grid-cols-2">
+                     <p className="font-normal not-italic text-5xl text-bg_gray2 my-5">¡En el Hospital Ashford estamos para servirles!</p>
+                     <p className="font-normal not-italic text-1xl text-turquee mb-12">Nuestra misión es proveer servicios médicos hospitalarios de excelencia con calor humano con empatía y compasión</p>
+                     <div className="grid grid-cols-2 gap-5">
                         <div>
                            <div>
-                              <p>118</p>
+                              <p className=" text-white font-normal text-5xl">118</p>
                            </div>
                            <div>
-                              <p>Años de servicio a la comunidad</p>
+                              <p className=" text-white font-medium text-base mb-0 mt-2">Años de servicio a la comunidad</p>
                            </div>
                         </div>
                         <div>
                            <div>
-                              <p>300</p>
+                              <p className=" text-white font-normal text-5xl">300</p>
                            </div>
                            <div>
-                              <p>Vidas de bebés salvadas al año en  nuestro NICU Nivel 3</p>
-                           </div>
-                        </div>
-                        <div>
-                           <div>
-                              <p>#1</p>
-                           </div>
-                           <div>
-                              <p>La clínica colorrectal más completa de Puerto Rico</p>
+                              <p className=" text-white font-medium text-base mb-0 mt-2">Vidas de bebés salvadas al año en  nuestro NICU Nivel 3</p>
                            </div>
                         </div>
                         <div>
                            <div>
-                              <p>#1</p>
+                              <p className=" text-white font-normal text-5xl">#1</p>
                            </div>
                            <div>
-                              <p>#1 en partos en Hospital Privado en Puerto Rico</p>
+                              <p className=" text-white font-medium text-base mb-0 mt-2">La clínica colorrectal más completa de Puerto Rico</p>
+                           </div>
+                        </div>
+                        <div>
+                           <div>
+                              <p className=" text-white font-normal text-5xl">#1</p>
+                           </div>
+                           <div>
+                              <p className=" text-white font-medium text-base mb-0 mt-2">#1 en partos en Hospital Privado en Puerto Rico</p>
                            </div>
                         </div>
                      </div>
                   </div>
+               </div>
+               <div className="flex flex-col lg:flex-row items-center w-full min-h-full">
+                  <div className=""></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
                </div>
             </div>
             <div className=" max-w-full bg-white">
