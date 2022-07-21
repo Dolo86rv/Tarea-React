@@ -1,6 +1,6 @@
 import React from 'react'
 import { HashLink as Link } from 'react-router-hash-link'
-
+import { useState } from 'react'
 import lupa from '../../img/lupa.svg'
 import menu from '../../img/menu.svg'
 import { Links, Lupa, Simple } from './styles'
@@ -300,12 +300,43 @@ const paraPacientes_html=()=>{
   
     }
 
-export const Items = () => {
+const FormBuscar=()=>{
+    return(
+      <div className="flex box-border my-1 items-center">
+        <form role="search" action="/resultados" method="get" autocomplete="off" className="flex items-end p-2 transition-all w-full">
+            <Lupa>
+                <img className="ml-10 mt-2" src= {lupa} width="18" height="18" alt='search'></img>
+            </Lupa>
+            <div className="flex">
+              <input type="text" value="" id="header-search" placeholder="Buscar" name="s" className="border border-turquee text-xl bg-transparent"></input>
+               <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="#01426A" className="animated-icon mx-1"><path d="M13.41,12l6.3-6.29a1,1,0,1,0-1.42-1.42L12,10.59,5.71,4.29A1,1,0,0,0,4.29,5.71L10.59,12l-6.3,6.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l6.29,6.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"></path></svg>
+            </div>
+         </form>
+      </div>
+    )
+}
+
+const ButtonSearch=()=>{
   return(
+    <button className='bg-transparent' aria-label="Search">
+        <Lupa className="hidden lg:block">
+            <img className="ml-10 mt-2" src= {lupa} width="18" height="18" alt='search'></img>
+        </Lupa>
+    </button>
+  )
+}
+export const Items = () => {
+  const [isOpen, setIsOpen]=useState(false)
+
+  const handleClick=()=>{
+    setIsOpen(!isOpen)
+  }
+
+   return(
     <div className="flex flex-col md:flex-row-reverse space-x-2 ">
         
         <div className="items-end lg:hidden">
-         <button class="cursor-pointer text-xl bg-transparent" aria-label="Search">
+         <button className="cursor-pointer text-xl bg-transparent" aria-label="Search">
                <Lupa>
                 <img className="mx-4 mt-2" src= {lupa} width="24" height="24" alt='search'></img>
                </Lupa>
@@ -316,10 +347,8 @@ export const Items = () => {
              </Lupa>   
           </button>
         </div>
-      
-         <Lupa className="hidden lg:block">
-            <img className="ml-10 mt-2" src= {lupa} width="18" height="18" alt='search'></img>
-         </Lupa>
+
+         <ButtonSearch />
          <Simple className="hidden lg:block">
            <Link to="/contacto" className="p-2">Contacto</Link>
          </Simple>

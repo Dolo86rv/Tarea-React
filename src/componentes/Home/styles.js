@@ -1,11 +1,5 @@
 import styled from "styled-components";
 
-export const Seccion1=styled.div`
-     margin:0 auto;
-     width:100%;
-     display:flex;
-     
-` 
 export const Arrow=styled.div`
    position: sticky;
    color:#ffffff;
@@ -14,6 +8,7 @@ export const Arrow=styled.div`
      -webkit-transform: scale(1.2);
      transform: scale(1.1);
      color:#ffffff;
+    }
 `
 export const Seccion2=styled.div`
      width:100%;

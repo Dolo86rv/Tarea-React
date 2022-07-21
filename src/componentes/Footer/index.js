@@ -191,19 +191,17 @@ const Internet=()=>{
 
   const ListServicios=()=>{
     return(
-      <div className="col-span-2 justify-center text-white mt-16 ml-4 pl-8 border-l border-c_sea">
+      <div className="col-span-2 justify-center text-white mt-16 ml-6 pl-10 border-l border-c_sea">
           <div className="col-span-2 ml-4">
                 <p className="text-2xl font-medium text-turquee pb-4">Servicios y especialidades</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 md:col-start-1 gap-1">
-            <div className="grid grid-cols-2 gap-x-80 py-1 space-y-2 mt-0">
+          <div className="grid grid-cols-2 gap-x-1 py-1 space-y-2 mt-0">
               {list_service.map((item)=>(
-                <div className="px-4 w-96" key={item.id}>
+                <div className="px-4 w-72" key={item.id}>
                    <Link key={item.id} to={item.href} className="hover:text-turquee font-medium text-sm">{item.description}</Link>
-                </div>      
-              ))}         
-            </div>
-          </div>
+                </div>
+              ))}
+           </div>
       </div>
       
     )
@@ -275,9 +273,9 @@ export const Footer = () => {
             <p>Copyright © 2022. Ashford Hospital</p>
           </div> 
           <div className="col-span-3 ml-96 text-xs text-white pt-2 font-medium">
-              <a href="" className=" underline hover:text-turquee"><span className="mr-4">Lista comprensiva de cargos del Hospital Ashford</span></a>
-              <a href="" className="underline hover:text-turquee"><span className="mr-4 ">Política de privacidad</span></a>
-              <a href="" className="underline hover:text-turquee"><span className="mr-4 ">Política de conflictos de interés</span></a>  
+              <a href="/listadecargos" className=" underline hover:text-turquee"><span className="mr-4">Lista comprensiva de cargos del Hospital Ashford</span></a>
+              <a href="/politicadeprivacidad" className="underline hover:text-turquee"><span className="mr-4 ">Política de privacidad</span></a>
+              <a href="/politicadeconflictosdeinteres" className="underline hover:text-turquee"><span className="mr-4 ">Política de conflictos de interés</span></a>  
           </div>
       </div> 
       
@@ -285,70 +283,3 @@ export const Footer = () => {
     </footer>
   )
 }
-/*<div className="py-1 hover:text-turquee font-medium text-sm">
-                  <Link to="" >Radiología/Centro de imágenes</Link>
-                </div>
-                <div className="py-1 hover:text-turquee font-medium text-sm">
-                <Link to="">Unidad de cuidado intensivo neonatal</Link>
-                </div>
-                <div className="py-1 hover:text-turquee font-medium text-sm ">
-                  <Link to="">Medicina nuclear y centro de cardiología</Link>
-                </div> 
-                <div className="py-1 hover:text-turquee font-medium text-sm ">
-                <Link to="">Cirugía colorrectal</Link>
-                </div > 
-                <div className="py-1 hover:text-turquee font-medium text-sm">
-                  <Link to="">Laboratorio</Link>
-                </div> 
-                <div className="py-1 hover:text-turquee font-medium text-sm">
-                <Link to="">Ortopedia</Link>
-               </div> 
-               <div className="pb-1 hover:text-turquee font-medium text-sm">
-                  <Link to="">Centro de medicina física y rehabilitación</Link>
-               </div>
-               <div className="py-1 hover:text-turquee font-medium text-sm pl-1">
-                <Link to="">Medicina deportiva</Link>
-                </div>
-                <div className="py-1 hover:text-turquee font-medium text-sm">
-                  <Link to="">Cuidado de heridas</Link>
-                </div>
-                <div className="py-1 hover:text-turquee font-medium text-sm pl-1">
-                <Link to="">Otorrinolaringologia</Link>
-                </div>
-                <div className="py-1 hover:text-turquee font-medium text-sm">
-                  <Link to="">Ashford Prenatal</Link>
-                </div> 
-                <div className="py-1 hover:text-turquee font-medium text-sm pl-1">
-                <Link to="">Endocrinología</Link>
-                 </div>
-                 <div className="py-1 hover:text-turquee font-medium text-sm">
-                  <Link to="">Centro de la mujer</Link>
-                 </div>
-                 <div className="py-1 hover:text-turquee font-medium text-sm pl-1">
-                  <Link to="">Cirugía general</Link>
-                 </div> 
-                  <div className="pb-1 hover:text-turquee font-medium text-sm">
-                  <Link to="">Centro de vacunación</Link>
-                  </div>
-                  <div className="py-1 hover:text-turquee font-medium text-sm pl-1">
-                   <Link to="">Cirugía oncológica</Link>
-                  </div> 
-                  <div className="py-1 hover:text-turquee font-medium text-sm">
-                  <Link to="">Farmacia de la comunidad</Link>
-                  </div> 
-                  <div className="py-1 hover:text-turquee font-medium text-sm pl-1">
-                  <Link to="">Pediatría</Link>
-                  </div> 
-                  <div className="py-1 hover:text-turquee font-medium text-sm pl-1">
-                   <Link to="">Urología</Link>
-                  </div>
-                  <div className="py-1 hover:text-turquee font-medium text-sm">
-                  <Link to="">Obstetricia, ginecología y ginecología oncológica</Link>
-                  </div> 
-                  
-                  <div className="mt-14 text-turquee">
-                <Links title={title1} img={img1} url={url1}></Links>
-                <Links title={title2} img={img2} url={url2}></Links>
-                <Links title={title3} img={img3} url={url3}></Links>
-              </div>
-                  */
