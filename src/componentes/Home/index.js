@@ -72,7 +72,7 @@ import { HashLink as Link } from 'react-router-hash-link';
          </div>  
       )}
    
-      const list_datos_interes=[
+   const list_datos_interes=[
          {
             id:'118',
             estadisticas:'118',
@@ -93,7 +93,7 @@ import { HashLink as Link } from 'react-router-hash-link';
             estadisticas:'#1',
             description:'#1 en partos en Hospital Privado en Puerto Rico'
          }, 
-       ]
+   ]
       
    const Seccion3=()=>{
       return(
@@ -288,11 +288,11 @@ export const Home = () => {
   
   return (
       <div className="bg-gray-200 pt-12 flex flex-col w-full ">
-            <Seccion1 />
-            <Seccion2 />
-            <Seccion3 />
-            <Seccion4 />
-            <Seccion5 />
-         </div>
+         <Seccion1 />
+         <Seccion2 />
+         <Seccion3 />
+         <Seccion4 />
+         <Seccion5 />
+      </div>
   )}
 

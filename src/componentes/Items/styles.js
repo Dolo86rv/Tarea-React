@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Lupa = styled.div`
+export const Icons = styled.div`
 color:#27364b;
 -webkit-transition: all ease 0.6s;
 transition: all ease 0.6s;
