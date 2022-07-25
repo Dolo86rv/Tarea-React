@@ -39,8 +39,6 @@ line-height: 20px;
   text-transform: none;
 }
 `
-export const Form=styled.div`
 
-`
 
 

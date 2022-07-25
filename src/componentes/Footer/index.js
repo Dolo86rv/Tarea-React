@@ -82,7 +82,6 @@ const Internet=()=>{
             </a>
           </div>
         ))}
-         
      </div>
   )}
 

@@ -39,6 +39,7 @@ module.exports = {
       fontSize: {
         'xl':['32px','40px'],
         '1xl':['20px','21.6px'],
+        '2sm':['24px','32px'],
          's': ['10px', {
             lineHeight: '16px',
           }],

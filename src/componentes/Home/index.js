@@ -8,6 +8,10 @@ import Indice3 from '../../img/indice3.svg'
 import Indice4 from '../../img/indice4.svg'
 import Interest from '../../img/interest.png'
 import Servicios from '../../img/servicios.svg'
+import Story1 from '../../img/story1.png'
+import Story2 from '../../img/story2.jpg'
+import Story3 from '../../img/story3.png'
+import Story4 from '../../img/story4.png'
 import { HashLink as Link } from 'react-router-hash-link';
 
    const Seccion1=()=>{
@@ -94,7 +98,26 @@ import { HashLink as Link } from 'react-router-hash-link';
             description:'#1 en partos en Hospital Privado en Puerto Rico'
          }, 
    ]
-      
+   
+   const Seccion4=()=>{
+      return(
+         <div className="flex flex-col relative flex-wrap lg:flex-row justify-center items-start w-full z-40">
+            <div className="my-4 mr-5" style={{height:498, width:266.25}}>
+               <img src={Story1} className="bg-contain rounded-lg"></img>
+            </div>
+            <div className="my-4 mr-5" style={{height:498, width:266.25}}>
+               <img src={Story2} className="bg-contain rounded-lg"></img>
+            </div>
+            <div className="my-4 mr-5" style={{height:498, width:266.25}}>
+               <img src={Story3} className="bg-contain rounded-lg"></img>
+            </div>
+            <div className="my-4 mr-5" style={{height:498, width:266.25}}>
+                <img src={Story4} className="bg-contain rounded-lg"></img>
+            </div>
+         </div>  
+      )
+   }
+   
    const Seccion3=()=>{
       return(
          <div className="w-full bg-ashford">
@@ -119,13 +142,6 @@ import { HashLink as Link } from 'react-router-hash-link';
                         ))}
                      </div>
                   </div>
-               </div>
-               <div className="flex flex-col lg:flex-row items-center w-full min-h-full">
-                  <div className=""></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
                </div>
           </div>
       )
@@ -200,7 +216,7 @@ import { HashLink as Link } from 'react-router-hash-link';
       }
    ]
 
-   const Seccion4=()=>{
+   const Seccion5=()=>{
       return(
          <div className=" max-w-full bg-white">
             <div className="flex flex-col ml-auto mr-auto">
@@ -269,7 +285,7 @@ import { HashLink as Link } from 'react-router-hash-link';
          },
    ]
    
-   const Seccion5=()=>{
+   const Seccion6=()=>{
          return(
             <div className="w-full bg-bg_gray2">
                <p className="text-center text-c_footer font-normal text-xl not-italic py-14">Servicios</p>
@@ -289,10 +305,11 @@ export const Home = () => {
   return (
       <div className="bg-gray-200 pt-12 flex flex-col w-full ">
          <Seccion1 />
-         <Seccion2 />
+         <Seccion2 /> 
          <Seccion3 />
          <Seccion4 />
          <Seccion5 />
+         <Seccion6 />
       </div>
   )}
 
