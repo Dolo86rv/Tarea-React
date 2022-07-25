@@ -13,10 +13,11 @@ import Story2 from '../../img/story2.jpg'
 import Story3 from '../../img/story3.png'
 import Story4 from '../../img/story4.png'
 import { HashLink as Link } from 'react-router-hash-link';
+import { Marquee } from '../Marquee';
 
    const Seccion1=()=>{
       return(
-            <div className="flex mr-auto min-w-full">
+            <div className="flex mt-12 min-w-full">
                <img src={fondo} alt="Image background" className="object-fill"></img>
                   <div className="absolute my-48 mx-60 p-4 text-center text-white">
                         <p className="flex text-4xl mb-6 pb-6 space-x-0">Hospital Ashford, comprometidos con tu calidad de vida</p> 
@@ -303,7 +304,8 @@ import { HashLink as Link } from 'react-router-hash-link';
 export const Home = () => {
   
   return (
-      <div className="bg-gray-200 pt-12 flex flex-col w-full ">
+      <div className="bg-gray-200 flex flex-col w-full ">
+         <Marquee />
          <Seccion1 />
          <Seccion2 /> 
          <Seccion3 />

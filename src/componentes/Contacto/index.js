@@ -100,9 +100,9 @@ export const Contacto = () => {
     
       return(
         <div className="w-full min-h-full bg-c_background mb-28">
-            <div className="px-4 mt-14 ml-10 mb-1 py-10 w-full">
+            <div className="px-4 mt-14 ml-10 mb-1 mr-28 py-10">
               <p className="text-s font-bold tracking-widest text-turquee mb-4 uppercase">contacta</p>
-              <p className="text-5xl font-normal tracking-normal text-c_text">Contacta con Ashford</p>
+              <p className=" text-base font-normal tracking-normal text-c_text">Contacta con Ashford</p>
             </div>
             <div className="flex flex-wrap w-full min-h-full mx-8" >
                <div className="ml-20 mr-2" style={{height:400, width:490}}>

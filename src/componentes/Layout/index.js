@@ -18,11 +18,10 @@ import { Emergencia } from '../Emergencia'
 export const Layout = () => {
   
   return (
-      <div className="flex flex-col h-screen w-full">
+      <div className="flex flex-col h-screen min-w-full">
           <BrowserRouter>
             <Header />
             <div className="flex-grow w-full">
-              <Marquee />
                <Routes>
                   <Route exact path="/" element={<Home />} />
                   <Route exact path="/servicios" element={<Servicios />} />

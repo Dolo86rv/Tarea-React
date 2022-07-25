@@ -14,7 +14,7 @@ export const FormSearch = ({show}) => {
     
     return isShow ? (
         <div className="items-end border border-turquee rounded-sm p-2"> 
-           <form role="search" action="/resultados" method="" className="flex items-center border-0 transition ease-linear">
+           <form role="search" action="/resultados" method="" className="flex items-center border-0">
               <Icons>
                  <img className="cursor-pointer transform" src= {lupa} width="13" height="13" alt='search'></img>
               </Icons>
