@@ -29,6 +29,7 @@ module.exports = {
         'ashford':'#01426a',
         'service':'#c3d4e6',
         'c_box':'#8994a7',
+        'darkfont':'#0f1a2a',
       }, 
       boxShadow: {
         '3xl': '0 0px 30px rgba(112, 144, 176, 0.2)',
