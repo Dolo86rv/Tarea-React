@@ -102,17 +102,17 @@ import { Marquee } from '../Marquee';
    
    const Seccion4=()=>{
       return(
-         <div className="flex flex-col relative flex-wrap lg:flex-row justify-center items-start w-full z-40">
-            <div className="my-4 mr-5" style={{height:498, width:266.25}}>
-               <img src={Story1} className="bg-contain rounded-lg"></img>
+         <div className="flex flex-col flex-wrap absolute lg:flex-row justify-center items-start w-full -mt-60">
+            <div className="my-4 mr-5" style={{height:500, width:266.25}}>
+                 <img src={Story1} className="bg-contain rounded-lg"></img>
             </div>
-            <div className="my-4 mr-5" style={{height:498, width:266.25}}>
+            <div className="my-4 mr-5" style={{height:500, width:266.25}}>
                <img src={Story2} className="bg-contain rounded-lg"></img>
             </div>
-            <div className="my-4 mr-5" style={{height:498, width:266.25}}>
+            <div className="my-4 mr-5" style={{height:400, width:266.25}}>
                <img src={Story3} className="bg-contain rounded-lg"></img>
             </div>
-            <div className="my-4 mr-5" style={{height:498, width:266.25}}>
+            <div className="my-4 mr-5" style={{height:500, width:266.25}}>
                 <img src={Story4} className="bg-contain rounded-lg"></img>
             </div>
          </div>  
@@ -121,15 +121,15 @@ import { Marquee } from '../Marquee';
    
    const Seccion3=()=>{
       return(
-         <div className="w-full bg-ashford">
-               <div className="flex flex-row flex-wrap justify-center min-h-full">
-                  <Img>
-                     <img src={Interest} width={514} height={560}></img>
-                  </Img>
-                  <div className="flex flex-col flex-1 mt-14 ml-12 mr-28  min-h-full">
+         <div className="w-full bg-ashford" style={{height:825}}>
+               <div className="flex flex-row flex-wrap justify-center">
+                  <div className="mt-12 ml-28 rounded-md">
+                     <img className="bg-contain" src={Interest} width={514} height={750}></img>
+                  </div>
+                  <div className="flex flex-col flex-1 mt-14 ml-12 mr-28">
                      <p className="font-bold space-x-5 text-s text-turquee uppercase">Datos de interés</p>
                      <p className="font-normal not-italic text-5xl text-bg_gray2 my-5">¡En el Hospital Ashford estamos para servirles!</p>
-                     <p className="font-normal not-italic text-1xl text-turquee mb-12">Nuestra misión es proveer servicios médicos hospitalarios de excelencia con calor humano con empatía y compasión</p>
+                     <p className="font-normal not-italic text-1xl text-turquee mb-10">Nuestra misión es proveer servicios médicos hospitalarios de excelencia con calor humano con empatía y compasión</p>
                      <div className="grid grid-cols-2 gap-5">
                         {list_datos_interes.map((item)=>(
                           <div key={item.id}>
@@ -143,7 +143,9 @@ import { Marquee } from '../Marquee';
                         ))}
                      </div>
                   </div>
+                 
                </div>
+               
           </div>
       )
    }   
@@ -219,8 +221,9 @@ import { Marquee } from '../Marquee';
 
    const Seccion5=()=>{
       return(
-         <div className=" max-w-full bg-white">
-            <div className="flex flex-col ml-auto mr-auto">
+         <div className="max-w-full bg-white">
+            <Seccion4 />
+            <div className="flex flex-col ml-auto mr-auto mt-72">
                <p className="text-center text-c_footer font-normal text-xl not-italic py-16">Especialidades</p>
                <div className="flex flex-wrap flex-col justify-center mx-2 items-center md:flex-row min-h-full">
                   {list_especialidades.map((item)=>(
@@ -309,7 +312,6 @@ export const Home = () => {
          <Seccion1 />
          <Seccion2 /> 
          <Seccion3 />
-         <Seccion4 />
          <Seccion5 />
          <Seccion6 />
       </div>
