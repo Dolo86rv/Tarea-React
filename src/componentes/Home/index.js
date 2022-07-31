@@ -102,9 +102,15 @@ import { Marquee } from '../Marquee';
    
    const Seccion4=()=>{
       return(
-         <div className="flex flex-col flex-wrap absolute lg:flex-row justify-center items-start w-full -mt-60">
+         <div className="flex flex-col flex-wrap relative lg:flex-row justify-center items-start w-full -mt-60">
             <div className="my-4 mr-5" style={{height:500, width:266.25}}>
                  <img src={Story1} className="bg-contain rounded-lg"></img>
+                 <div className="flex flex-col justify-end relative pb-10 px-5">
+                   <div className="absolute text-left opacity-100">
+                     <p className=" text-lg font-normal not-italic text-white">Maydelise Columna</p>
+                     <p className="font-medium text-xs text-white">Paciente del Centro de la mujer</p>
+                   </div>
+                 </div>
             </div>
             <div className="my-4 mr-5" style={{height:500, width:266.25}}>
                <img src={Story2} className="bg-contain rounded-lg"></img>

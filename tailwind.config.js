@@ -23,7 +23,7 @@ module.exports = {
         'c_footer':'#002554',
         'bg_gray':'#6c757d',
         'bg_box':'#f4f4f7',
-        'c_border':'#cbd4e',
+        'c_border':'#cbd4e1',
         'c_sea':'#3eb1c81a',
         'bg_gray2':'#eff3f8',
         'ashford':'#01426a',

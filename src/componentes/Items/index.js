@@ -22,27 +22,15 @@ const servicios_especialidades=[
         sub_menu:[],
       },
       {
-        id:"medicina_nuclear_centro_de_cardiología",
-        description: "Medicina nuclear y centro de cardiología",
-        href:"/servicios#medicina_nuclear_centro_de_cardiología",
-        sub_menu:[],
-      },
-      {
-        id:"laboratorio",
-        description: "Laboratorio",
-        href:"/servicios#laboratorio",
-        sub_menu:[],
-      },
-      {
-        id:"centro_de_medicina_física_rehabilitación",
-        description: "Centro de medicina física y rehabilitación",
-        href:"/servicios#centro_de_medicina_física_y_rehabilitación",
-        sub_menu:[],
-      },
-      {
         id:"cuidado_de_heridas",
         description: "Cuidado de heridas",
         href:"/servicios#cuidado_de_heridas",
+        sub_menu:[],
+      },
+      {
+        id:"medicina_nuclear_centro_de_cardiología",
+        description: "Medicina nuclear y centro de cardiología",
+        href:"/servicios#medicina_nuclear_centro_de_cardiología",
         sub_menu:[],
       },
       {
@@ -52,9 +40,21 @@ const servicios_especialidades=[
         sub_menu:[],
       },
       {
+        id:"laboratorio",
+        description: "Laboratorio",
+        href:"/servicios#laboratorio",
+        sub_menu:[],
+      },
+      {
         id:"centro_de_la_mujer",
         description: "Centro de la mujer",
         href:"/servicios#centro_de_la_mujer",
+        sub_menu:[],
+      },
+      {
+        id:"centro_de_medicina_física_rehabilitación",
+        description: "Centro de medicina física y rehabilitación",
+        href:"/servicios#centro_de_medicina_física_y_rehabilitación",
         sub_menu:[],
       },
       {
@@ -155,21 +155,20 @@ const servicios_especialidades=[
 const serviciosEspecialidades_html=()=>{
   
     return (
-      <div className="grid grid-cols-3">
-        <div>
-          <div className="text-2xl text-c_text">Servicios y especialidades</div>
-          <div className="pt-5 pr-5 text-c_text normal-case">En el Hospital Ashford ofrecemos una gran diversidad de servicios.</div>
+      <div className="flex">
+        <div className="ml-8 w-2/4">
+          <div className="text-xl font-normal text-c_text normal-case">Servicios y especialidades</div>
+          <div className="pt-5 text-c_text normal-case">En el Hospital Ashford ofrecemos una gran diversidad de servicios.</div>
         </div>
         {servicios_especialidades.map((item) => (
-          
-          <div className="pl-8 pr-8 space-y-2 border-l border-gray-400 grid grid-cols-2 capitalize gap-1" key={item.id}>
-            <div className="col-span-2">
-               <Link key={item.id} className="text-lg text-turquee" to={item.href}>{item.description}</Link>
+          <div className="grid grid-cols-2 gap-2 space-y-1 border-l border-c_border capitalize pl-8 w-2/3" key={item.id}>
+            <div className=" col-span-2">
+               <Link className="text-lg font-medium text-turquee" to={item.href}>{item.description}</Link>
              </div>
-            { item.sub_menu.map((sub_item) => (
-              <div key={sub_item.id}>
-                <Link key={sub_item.id} to={sub_item.href} className="text-c_text hover:text-turquee">{sub_item.description}</Link >
-              </div>
+            {item.sub_menu.map((sub_item) => (
+              <ul key={sub_item.id} className="mr-1">
+                 <Link to={sub_item.href} className="text-sm font-normal text-c_text hover:text-turquee normal-case">{sub_item.description}</Link >
+              </ul>
               ))
             }
           </div>
@@ -201,8 +200,8 @@ const serviciosEspecialidades_html=()=>{
   const sobreNosotros_html=()=>{
   
     return(
-      <div className="grid grid-cols-3">
-         <div>
+      <div className="grid grid-cols-3 ">
+         <div className="ml-6"> 
             <div className="text-2xl text-c_text">
                 Sobre Nostros
             </div>
@@ -211,7 +210,7 @@ const serviciosEspecialidades_html=()=>{
             </div>
         </div>
         {sobre_nosotros.map((item)=>(
-          <div className="pl-10 space-y-2 border-l border-gray-400 capitalize" key={item.id}>
+          <div className="space-y-2 border-l border-c_border capitalize pl-8 w-2/3" key={item.id}>
             <Link key={item.id} to={item.href} className="text-lg text-turquee">{item.description}</Link>
 
             {item.sub_menu.map((subItem)=>(
@@ -273,8 +272,8 @@ const para_pacientes=[
 const paraPacientes_html=()=>{
      
   return (
-    <div className="grid grid-cols-3 pb-8">
-      <div>
+    <div className="grid grid-cols-3">
+      <div className="ml-6">
         <div className="text-2xl text-c_text">
               Para Paciente
         </div>
@@ -283,7 +282,7 @@ const paraPacientes_html=()=>{
         </div>
       </div>
       {para_pacientes.map((item)=>(
-        <div className="pl-10 space-y-2 border-l border-gray-400 capitalize" key={item.id} >
+        <div className="space-y-2 border-l border-c_border capitalize pl-8 w-2/3"  key={item.id} >
           <Link key={item.id} to={item.href} className="text-lg text-turquee">{item.description}</Link>
 
           {item.sub_menu.map((subMenu)=>(
