@@ -215,7 +215,7 @@ const serviciosEspecialidades_html=()=>{
 
             {item.sub_menu.map((subItem)=>(
               <div key={subItem.id}>
-                <Link key={subItem.id} to={subItem.href} className="text-c_text hover:text-turquee">{subItem.description}</Link>
+                <Link key={subItem.id} to={subItem.href} className="text-c_text hover:text-turquee normal-case">{subItem.description}</Link>
               </div>
             ))}
           </div>
@@ -233,7 +233,7 @@ const para_pacientes=[
     sub_menu: [
       {
        id:"condiciones_de_salud",
-       description: "Condiciones de Salud",
+       description: "Condiciones de salud",
        sub_menu:[],
        href:"/parapacientes#codiciones_de_salud"
       },
@@ -288,7 +288,7 @@ const paraPacientes_html=()=>{
           {item.sub_menu.map((subMenu)=>(
             <ul key={subMenu.id}>
               <Links>
-                 <Link key={subMenu.id} to={subMenu.href} className="text-c_text hover:text-turquee">{subMenu.description}</Link>
+                 <Link key={subMenu.id} to={subMenu.href} className="text-c_text hover:text-turquee normal-case">{subMenu.description}</Link>
               </Links>
             </ul>
           ))}

@@ -19,9 +19,9 @@ import { Marquee } from '../Marquee';
       return(
             <div className="flex mt-12 min-w-full">
                <img src={fondo} alt="Image background" className="object-fill"></img>
-                  <div className="absolute my-48 mx-60 p-4 text-center text-white">
-                        <p className="flex text-4xl mb-6 pb-6 space-x-0">Hospital Ashford, comprometidos con tu calidad de vida</p> 
-                        <p className=" text-2xl leading-6 font-normal pt-4 space-x-0">Por 118 años hemos operado de forma continua con los principios de nuestros fundadores como norte: Salud preventiva, vocación al servicio, innovación y trato con calor humano.</p>  
+                  <div className="absolute my-48 mx-60 p-4 text-center text-white opacity-100">
+                        <p className="flex text-4xl mb-6 pb-6 space-x-0 animate-reavel">Hospital Ashford, comprometidos con tu calidad de vida</p> 
+                        <p className=" text-2xl leading-6 font-normal pt-4 space-x-0 animate-reavel">Por 118 años hemos operado de forma continua con los principios de nuestros fundadores como norte: Salud preventiva, vocación al servicio, innovación y trato con calor humano.</p>  
                      <Arrow>
                         <img src={arrow_down} alt='arrow' className="ml-96 mt-36"></img>
                      </Arrow>
@@ -67,7 +67,7 @@ import { Marquee } from '../Marquee';
                   <p className="text-2xl block static z-auto mt-11 text-c_footer text-center font-normal sm:text-4xl">¡Saludos! ¿Cómo podríamos ayudarle?</p>
             <div className="flex flex-wrap min-h-full justify-center items-stretch py-12 px-20">
                {list_seccion2.map((item)=>(
-                  <Box2>
+                  <Box2 className="animate-reavel">
                      <img className="ml-32" src={item.img} alt={item.alt} width={20} height={20} ></img>
                      <p className="my-6 text-lg text-c_footer font-normal not-italic text-center">{item.title}</p>
                      <p className=" mb-4 mt-0 text-sm text-c_box items-center font-normal not-italic text-center">{item.description}</p>

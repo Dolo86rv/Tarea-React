@@ -5,11 +5,20 @@ module.exports = {
     extend: {
       animation: {
         marquee: 'marquee 36.25s linear 0s infinite',
+        reavel:'reavel 1s both',
       },
       keyframes: {
         marquee: {
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(-100%)' },
+        },
+        reavel: {
+          '0%': { 
+            opacity:'0',
+            transform: 'translate3d(0px,100%,0px)'},
+          '100%': { 
+            opacity:'1',
+            transform: 'none' },
         },
       },
       width: {
