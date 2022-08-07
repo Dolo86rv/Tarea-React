@@ -18,10 +18,10 @@ import { Emergencia } from '../Emergencia'
 export const Layout = () => {
   
   return (
-      <div className="flex flex-col h-screen min-w-full">
+    <div className="flex flex-col min-w-full">
           <BrowserRouter>
             <Header />
-            <div className="flex-grow w-full">
+            <div className="flex-grow w-full" >
                <Routes>
                   <Route exact path="/" element={<Home />} />
                   <Route exact path="/servicios" element={<Servicios />} />
@@ -35,7 +35,6 @@ export const Layout = () => {
             </div>
              <Footer />
           </BrowserRouter>
-       </div>
-
+        </div>
   )
 }

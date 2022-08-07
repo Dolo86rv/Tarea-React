@@ -68,15 +68,11 @@ export default createGlobalStyle`
     --line-height-15: 98px;
     --line-height-16: 80px
  }
-html{
-   background-color:var(--fondo1);
-   min-height:100%;
-   box-sizing: border-box;
-}
 *{
-   padding:0;
-   margin:0;
    box-sizing:border-box;
+}
+body{
+   margin:0;
 }
 *, :after, :before {
    box-sizing: border-box;

@@ -37,12 +37,12 @@ const list_information=[
 export const Contacto = () => {
   
        return(
-        <div className="w-full min-h-full mr-auto ml-auto bg-c_background mb-28" style={{maxWidth:1440}}>
-            <div className="px-4 mt-14 ml-10 mb-1 mr-28 py-10">
+        <div className="w-full min-h-full flex flex-col bg-c_background">
+            <div className="px-4 mt-16 ml-1 mb-1 mr-28 py-10 lg:mt-20 lg:ml-10">
               <p className="text-s font-bold tracking-widest text-turquee mb-4 uppercase">contacta</p>
               <p className="text-5xl font-normal tracking-normal text-c_text">Contacta con Ashford</p>
             </div>
-            <div className="flex flex-wrap min-h-full mx-8" >
+            <div className="flex flex-col min-h-full mx-8 md:flex-row" >
                <div className="ml-20 mr-2" style={{height:520, width:574.5}}>
                  Google Map
                </div>

@@ -32,7 +32,6 @@ text-transform: none;
 font-size: 14px;
 font-style: normal;
 font-weight: 400;
-padding-top:8px;
 line-height: 20px;
 &:hover {
   color:#3eb1c8;

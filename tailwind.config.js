@@ -6,6 +6,7 @@ module.exports = {
       animation: {
         marquee: 'marquee 36.25s linear 0s infinite',
         reavel:'reavel 1s both',
+        icon:'icon 0.6s ease',
       },
       keyframes: {
         marquee: {
@@ -20,9 +21,18 @@ module.exports = {
             opacity:'1',
             transform: 'none' },
         },
+        ico:{
+          '0%': { 
+            transform: 'scaleY(1)'},
+          '100%': { 
+            transform: 'none' },
+        },
       },
       width: {
         'fit':'fit-content',
+      },
+      height: {
+        '17': '4.125rem',
       },
       colors:{
         'turquee':'#3eb1c8',
@@ -39,9 +49,14 @@ module.exports = {
         'service':'#c3d4e6',
         'c_box':'#8994a7',
         'darkfont':'#0f1a2a',
+        'c_story':'#eff3f8',
       }, 
       boxShadow: {
         '3xl': '0 0px 30px rgba(112, 144, 176, 0.2)',
+      },
+      dropShadow: {
+        '3xl': '0 0px 6px rgba(0, 0, 0, 0.2)',
+        '4xl':'0 0px 10px rgba(0, 0, 0, 0.15)'
       },
       fontFamily:{
         'Futura-Std':['Futura Std-Book'],
@@ -57,6 +72,11 @@ module.exports = {
       margin: {
         '34': '140px',
       },
+      spacing: {
+        '5px': '5px',
+        '10px':'10px',
+        '34px':'34px',
+      },
       letterSpacing: {
          widest: '.13em',
       },  
@@ -68,8 +88,8 @@ module.exports = {
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
       'ssm':'330px',
-      '1sm':'572px',
-
+      '1sm':'576px',
+       's':'244px',
       'md': '768px',
       // => @media (min-width: 768px) { ... }
 

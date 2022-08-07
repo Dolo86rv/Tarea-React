@@ -8,6 +8,7 @@ import { Item } from '../Item'
 import { FormSearch } from './FormSearch'
 import  menu from '../../img/menu.svg'
 
+
 // Menu Servicio y Especilaidades..........
 const servicios_especialidades=[
   {
@@ -300,40 +301,46 @@ const paraPacientes_html=()=>{
     }
     
 export const Items = () => {
-    
     const [isOpen, setIsOpen]=useState(false)
 
     const handleClick=()=>{
-        setIsOpen(!isOpen)
-    } 
-   return(
-    <div className="flex flex-col md:flex-row-reverse space-x-4">
-         
-         <button className="text-xl bg-transparent lg:hidden" aria-label="toggle">
-            <Icons>
-              <img className="mx-4 mt-2" src= {menu} width="24" height="24" alt='menu'></img>
-            </Icons>   
-         </button> 
-         <ButtonSearch state={isOpen} open={handleClick} className="hidden lg:block" />
-         {isOpen && <FormSearch show={isOpen} />}
-         
+       setIsOpen(!isOpen)
+    }   
+
+  return(
+    <div className="flex flex-row-reverse flex-grow items-center space-x-6 mr-4 mt-10px lg:mt-0">
+        <button className="bg-transparent lg:hidden" aria-label="toggle">
+          <Icons>
+            <img className="mx-4 my-2" src= {menu} width={23} height={23} alt='menu'></img>
+          </Icons>   
+        </button>  
+        <ButtonSearch state={isOpen} open={handleClick} className=""/>
+        {isOpen && <FormSearch show={isOpen}/>}
+
          <Simple className="hidden lg:block">
-           <Link to="/contacto" className="p-2">Contacto</Link>
+           <Link to="/contacto" className="">Contacto</Link>
          </Simple>
          <Links className="hidden lg:block">
            <Item title="Sobre nosotros" subMenu={sobreNosotros_html()}></Item>
          </Links>
-         <Links className="hidden lg:block">
+         <Links className="hidden lg:block"> 
            <Item title="Para pacientes" subMenu={paraPacientes_html()}></Item>
           </Links>
           <Simple className="hidden lg:block">
-             <Link to="/salaemergencia" className="p-2">Sala de emergencia</Link>
+             <Link to="/salaemergencia" className="">Sala de emergencia</Link>
           </Simple>
           <Links className="hidden lg:block">
            <Item title="Servicios y especialidades" subMenu={serviciosEspecialidades_html()}></Item>
           </Links>
+         
       </div>
   )
 }
 
-
+/*<button className="bg-transparent lg:hidden" aria-label="toggle">
+          <Icons>
+            <img className="mx-4 my-2" src= {menu} width={23} height={23} alt='menu'></img>
+          </Icons>   
+        </button>  
+        <ButtonSearch state={isOpen} open={handleClick} />
+        {isOpen && <FormSearch show={isOpen}/>}*/

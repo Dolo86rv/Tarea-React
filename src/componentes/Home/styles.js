@@ -5,8 +5,8 @@ export const Arrow=styled.div`
    color:#ffffff;
    cursor:pointer;
     &:hover {
-     -webkit-transform: scale(1.2);
-     transform: scale(1.1);
+     -webkit-transform: scale(2);
+     transform: scale(2);
      color:#ffffff;
     }
 `

@@ -17,15 +17,19 @@ import { Marquee } from '../Marquee';
 
    const Seccion1=()=>{
       return(
-            <div className="flex mt-12 min-w-full">
+            <div className="flex flex-col mt-10 min-w-screen justify-center items-center">
                <img src={fondo} alt="Image background" className="object-fill"></img>
-                  <div className="absolute my-48 mx-60 p-4 text-center text-white opacity-100">
-                        <p className="flex text-4xl mb-6 pb-6 space-x-0 animate-reavel">Hospital Ashford, comprometidos con tu calidad de vida</p> 
-                        <p className=" text-2xl leading-6 font-normal pt-4 space-x-0 animate-reavel">Por 118 años hemos operado de forma continua con los principios de nuestros fundadores como norte: Salud preventiva, vocación al servicio, innovación y trato con calor humano.</p>  
-                     <Arrow>
-                        <img src={arrow_down} alt='arrow' className="ml-96 mt-36"></img>
-                     </Arrow>
+                  <div className="absolute px-4 1sm:justify-center 1sm:items-center">
+                        <p className="text-2xl font-normal drop-shadow-3xl text-white text-center mb-6 pb-6 space-x-0 animate-reavel 1sm:text-xl md:text-5xl ">Hospital Ashford, comprometidos con tu calidad de vida</p> 
+                        <p className="text-base leading-6 font-normal drop-shadow-4xl text-white text-center pt-4 space-x-0 animate-reavel 1sm:text-lg">Por 118 años hemos operado de forma continua con los principios de nuestros fundadores como norte: Salud preventiva, vocación al servicio, innovación y trato con calor humano.</p>  
                   </div>
+                  
+                     <div className="absolute justify-center h-1 bottom-0 1sm:flex">
+                        <div className="sticky bottom-0 pb-8">
+                           <img src={arrow_down} width={25} height={25} alt='arrow'></img>
+                        </div>
+                     </div>
+                  
             </div>
       )
    }
@@ -65,15 +69,15 @@ import { Marquee } from '../Marquee';
       return(
          <div className="w-full mt-16">
                   <p className="text-2xl block static z-auto mt-11 text-c_footer text-center font-normal sm:text-4xl">¡Saludos! ¿Cómo podríamos ayudarle?</p>
-            <div className="flex flex-wrap min-h-full justify-center items-stretch py-12 px-20">
+            <div className="flex flex-wrap min-h-full justify-center items-stretch py-12 px-20 animate-reavel">
                {list_seccion2.map((item)=>(
-                  <Box2 className="animate-reavel">
+                  <Box2>
                      <img className="ml-32" src={item.img} alt={item.alt} width={20} height={20} ></img>
                      <p className="my-6 text-lg text-c_footer font-normal not-italic text-center">{item.title}</p>
                      <p className=" mb-4 mt-0 text-sm text-c_box items-center font-normal not-italic text-center">{item.description}</p>
                   </Box2> 
                ))}  
-         </div>
+            </div>
          </div>  
       )}
    
@@ -100,27 +104,53 @@ import { Marquee } from '../Marquee';
          }, 
    ]
    
+   const list_story=[
+      {
+         id:'story0',
+         img:Story1,
+         nombre:'Maydelise Columna',
+         description:'Paciente del Centro de la mujer',
+         href:'/testimonios#0'
+      },
+      {
+         id:'story1',
+         img:Story2,
+         nombre:'Natalie y Daniel',
+         description:'Pacientes de Ginecología y sala de partos',
+         href:'/testimonios#1'
+      },
+      {
+         id:'story2',
+         img:Story3,
+         nombre:'Dra. Rosa Bonilla',
+         description:'Directora NICU Nivel 3',
+         href:'/testimonios#2'
+      },
+      {
+         id:'story3',
+         img:Story4,
+         nombre:'Elizabeth De Jesús',
+         description:'Sobreviviente de COVID-19',
+         href:'/testimonios#3'
+      },
+   ]
    const Seccion4=()=>{
       return(
-         <div className="flex flex-col flex-wrap relative lg:flex-row justify-center items-start w-full -mt-60">
-            <div className="my-4 mr-5" style={{height:500, width:266.25}}>
-                 <img src={Story1} className="bg-contain rounded-lg"></img>
-                 <div className="flex flex-col justify-end relative pb-10 px-5">
-                   <div className="absolute text-left opacity-100">
-                     <p className=" text-lg font-normal not-italic text-white">Maydelise Columna</p>
-                     <p className="font-medium text-xs text-white">Paciente del Centro de la mujer</p>
-                   </div>
-                 </div>
-            </div>
-            <div className="my-4 mr-5" style={{height:500, width:266.25}}>
-               <img src={Story2} className="bg-contain rounded-lg"></img>
-            </div>
-            <div className="my-4 mr-5" style={{height:400, width:266.25}}>
-               <img src={Story3} className="bg-contain rounded-lg"></img>
-            </div>
-            <div className="my-4 mr-5" style={{height:500, width:266.25}}>
-                <img src={Story4} className="bg-contain rounded-lg"></img>
-            </div>
+         <div className="flex flex-col flex-wrap relative lg:flex-row justify-center items-start w-full -mt-60 opacity-100">
+            {list_story.map((item)=>(
+              <div className="my-4 mr-5" style={{width:341.3}} key={item.id}>
+                  <img src={item.img} className="bg-contain rounded-lg" height={498} width={'100%'}></img>
+                  <div className="flex flex-col justify-end relative pb-10 px-5">
+                     <div className="absolute text-left opacity-100">
+                        <p className=" text-lg font-normal not-italic text-c_story">{item.nombre}</p>
+                        <p className="font-medium text-xs text-white">{item.description}</p>
+                     </div>
+                     <div>
+                        <Link to={item.href} className="text-white">Leer más</Link>
+                     </div>
+                  </div>
+              </div>
+            ))}
          </div>  
       )
    }
@@ -313,7 +343,7 @@ import { Marquee } from '../Marquee';
 export const Home = () => {
   
   return (
-      <div className="bg-gray-200 flex flex-col w-full ">
+      <div className="flex flex-col w-full bg-gray-200">
          <Marquee />
          <Seccion1 />
          <Seccion2 /> 
@@ -322,4 +352,5 @@ export const Home = () => {
          <Seccion6 />
       </div>
   )}
+
 
