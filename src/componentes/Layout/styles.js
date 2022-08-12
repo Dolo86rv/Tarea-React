@@ -1,12 +1,10 @@
 import styled from 'styled-components'
 
-export const Container=styled.div`
-    width: 100%; 
-    height:100%;
-`
 export const Wrapper=styled.div`
-     margin:0 auto; 
-     
-
+    width: 100%; 
+    height:calc(100vh - 66px);
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:66px;
 `
 

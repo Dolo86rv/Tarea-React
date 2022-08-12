@@ -1,6 +1,13 @@
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  content:[
+    './public/**/*.html',
+    './src/**/*.{js,jsx,ts,tsx}',
+  ],
+  //purge: [
+  //   './public/**/*.html',
+  //  './src/**/*.{js,jsx,ts,tsx}',
+  //   './node_modules/**/*.js',
+ //],
   theme: {
     extend: {
       animation: {
@@ -23,10 +30,13 @@ module.exports = {
         },
         ico:{
           '0%': { 
-            transform: 'scaleY(1)'},
+            transform: 'scale(1)'},
           '100%': { 
             transform: 'none' },
         },
+      },
+      maxWidth: {
+        '8xl': '1440px',
       },
       width: {
         'fit':'fit-content',
@@ -76,6 +86,8 @@ module.exports = {
         '5px': '5px',
         '10px':'10px',
         '34px':'34px',
+        '66px':'66px',
+        '42':'42px',
       },
       letterSpacing: {
          widest: '.13em',
@@ -91,6 +103,7 @@ module.exports = {
       '1sm':'576px',
        's':'244px',
       'md': '768px',
+      '1md':'800px',
       // => @media (min-width: 768px) { ... }
 
       'lg': '991px',
@@ -109,7 +122,7 @@ module.exports = {
       
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
  }
 
 

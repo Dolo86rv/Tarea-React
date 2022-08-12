@@ -327,7 +327,7 @@ export const Items = () => {
            <Item title="Para pacientes" subMenu={paraPacientes_html()}></Item>
           </Links>
           <Simple className="hidden lg:block">
-             <Link to="/salaemergencia" className="">Sala de emergencia</Link>
+             <Link to="/salaemergencia" className=" decoration-inherit">Sala de emergencia</Link>
           </Simple>
           <Links className="hidden lg:block">
            <Item title="Servicios y especialidades" subMenu={serviciosEspecialidades_html()}></Item>

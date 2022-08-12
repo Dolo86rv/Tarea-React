@@ -71,13 +71,13 @@ const Links=()=>{
 
 const Internet=()=>{
   return(
-       <div className="flex relative my-7 ml-auto pl-0">
+       <div className="flex mt-8 -mr-4">
         {list_redes.map((item)=>(
-          <div key={item.id} className="rounded-full border-c_border bg-white w-11 h-11 mx-2">
-            <a href={item.href}>
-               <img className="pt-3 ml-3" src={item.img} width={item.Width} height={item.Height}></img>
-            </a>
-          </div>
+           <div key={item.id} className="rounded-full border-c_border bg-white w-42 h-42 mx-2">
+              <Link to={item.href}>
+                <img className="pt-3 ml-3" src={item.img} width={item.Width} height={item.Height}></img>
+              </Link>
+            </div>          
         ))}
      </div>
   )}
@@ -187,13 +187,13 @@ const Internet=()=>{
 
   const ListServicios=()=>{
     return(
-      <div className="col-span-2 justify-center text-white mt-16 ml-6 pl-10 border-l border-c_sea">
-          <div className="col-span-2 ml-4">
-                <p className="text-2xl font-medium text-turquee pb-4">Servicios y especialidades</p>
+      <div className="text-white my-8 order-2 border-0 1sm:order-3 1lg:order-2 1lg:my-0 1lg:pl-8 1lg:border-l border-c_sea">
+          <div className="ml-0 1sm:ml-4">
+                <p className="text-lg font-medium text-turquee mb-4">Servicios y especialidades</p>
           </div>
-          <div className="grid grid-cols-2 gap-x-1 py-1 space-y-2 mt-0">
+          <div className="grid grid-cols-1 1sm:grid-cols-2 py-1 space-y-1 w-fit">
               {list_service.map((item)=>(
-                <div className="px-4 w-72" key={item.id}>
+                <div className="px-0 1sm:px-4" key={item.id}>
                    <Link key={item.id} to={item.href} className="hover:text-turquee font-medium text-sm">{item.description}</Link>
                 </div>
               ))}
@@ -233,12 +233,12 @@ const Internet=()=>{
 
   const Para_Pacientes=()=>{
      return(
-      <div className="flex flex-col mt-16 border-0 border-c_sea pl-8 sm:ml-2 md:ml-2 md:border-l">
-         <p className="text-2xl font-medium text-turquee pb-4">Para pacientes</p>
+      <div className="flex flex-col order-3 border-0 border-c_sea my-8 1sm:order-2 1sm:px-8 1sm:my-0 1lg:order-3 lg:pr-0 sm:border-l">
+         <p className="text-lg font-medium text-turquee pb-4">Para pacientes</p>
           <div className="pb-2 text-white">
                {list_pacientes.map((items)=>(
                  <ul className="py-1">
-                   <li>
+                   <li className="w-fit">
                      <Link to={items.href} className="hover:text-turquee font-medium text-sm" key={items.id}>{items.description}</Link>
                    </li>
                  </ul>
@@ -250,32 +250,36 @@ const Internet=()=>{
 
 export const Footer = () => {
   return (
-    <footer className="bg-c_footer w-full" >
-      
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 w-full mb-14">
-          <div className="mt-16 ml-4 mr-0 sm:ml-10 md:ml-14">
+    <footer>
+      <div className="bg-c_footer w-full" >
+        <div className="w-full max-w-8xl mx-auto pt-10 pb-0 px-4 1sm:pt-16 1sm:px-14 lg:px-28 ">
+          <div className="w-full flex flex-col 1sm:flex-row 1sm:justify-between 1sm:flex-wrap">
+            <div className="mb-8 1sm:mb-0 1sm:mr-8 order-1">
               <img src={Logo} width={147} height={56} alt="logo_footer"></img>
               <p className="text-lg font-medium text-white pt-8">Ashford Hospital</p>
               <p className="text-white">
                 <span className="font-medium text-sm block">1451 Ave Dr Ashford,</span>
                 <span className="font-medium text-sm block">00907, San Juan, Puerto Rico</span>
               </p>
-               <Links />
-               <Internet />
+              <Links />
+              <Internet />
+            </div>
+            <ListServicios />
+            <Para_Pacientes />   
           </div>
-               <ListServicios />
-               <Para_Pacientes />
-          <div className="w-full text-white ml-14 mt-2 text-xs font-medium">
-            <p>Copyright © 2022. Ashford Hospital</p>
-          </div> 
-          <div className="col-span-3 ml-96 text-xs text-white pt-2 font-medium">
-              <a href="/listadecargos" className=" underline hover:text-turquee"><span className="mr-4">Lista comprensiva de cargos del Hospital Ashford</span></a>
-              <a href="/politicadeprivacidad" className="underline hover:text-turquee"><span className="mr-4 ">Política de privacidad</span></a>
-              <a href="/politicadeconflictosdeinteres" className="underline hover:text-turquee"><span className="mr-4 ">Política de conflictos de interés</span></a>  
+        </div>
+        <div className="flex flex-col-reverse justify-between w-full max-w-8xl mx-auto py-6 px-4 1md:flex-row 1sm:px-14 1sm:pt-10 1sm:pb-6">
+          <p className="items-center font-medium text-xs text-white not-italic mt-6 1md:mt-0">Copyright © 2022. Ashford Hospital</p>
+          <div className="flex flex-col 1md:flex-row 1md:items-center">
+            <Link to="/listadecargos" className="text-white font-medium text-xs not-italic inline-flex underline hover:text-turquee mr-0 mb-2 lg:mb-0 lg:mr-8">Lista comprensiva de cargos del Hospital Ashford</Link>
+            <Link to="/politicadeprivacidad" className=" text-white font-medium text-xs not-italic underline hover:text-turquee mr-0 mb-2 1md:mb-0 1md:mr-8">Política de privacidad</Link>
+            <Link to="/politicadeconflictosdeinteres" className="text-white font-medium text-xs not-italic underline hover:text-turquee mb-2 1md:mb-0 1md:mr-8">Política de conflictos de interés</Link>
           </div>
+        </div>
       </div> 
-      
-      
     </footer>
   )
 }
+
+
+    

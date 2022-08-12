@@ -17,7 +17,7 @@ import { Marquee } from '../Marquee';
 
    const Seccion1=()=>{
       return(
-            <div className="flex flex-col mt-10 min-w-screen justify-center items-center">
+            <div className="flex flex-col justify-center items-center">
                <img src={fondo} alt="Image background" className="object-fill"></img>
                   <div className="absolute px-4 1sm:justify-center 1sm:items-center">
                         <p className="text-2xl font-normal drop-shadow-3xl text-white text-center mb-6 pb-6 space-x-0 animate-reavel 1sm:text-xl md:text-5xl ">Hospital Ashford, comprometidos con tu calidad de vida</p> 
