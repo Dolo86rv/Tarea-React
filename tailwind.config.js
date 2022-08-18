@@ -115,7 +115,7 @@ module.exports = {
       'lg': '991px',
       // => @media (min-width: 991px) { ... }
       '1lg':'1024px',
-      
+      '1xl':'1200px',
       'xl': '1280px',
       // => @media (min-width: 1280px) { ... }
 

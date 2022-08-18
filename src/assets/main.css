@@ -1803,6 +1803,16 @@ select {
     padding-left: 2rem;
   }
 }
+@media (min-width: 1200px) {
+
+  .\31xl\:max-w-4xl {
+    max-width: 56rem;
+  }
+
+  .\31xl\:p-0 {
+    padding: 0px;
+  }
+}
 @media (max-width: 576px) {
 
   .\32sm\:hidden {

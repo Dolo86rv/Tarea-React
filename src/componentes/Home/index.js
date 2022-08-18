@@ -23,9 +23,9 @@ import { Marquee } from '../Marquee';
                   <img src={fondo} alt="Image background" className="object-cover"></img>
                </div>
                <div className="1sm:hidden 1sm:h-114px relative overflow-hidden w-full h-full">
-                  <img src={fondo2} alt="Image background" className=" object-contain"></img>
+                  <img src={fondo2} alt="Image background" className=" object-cover w-full"></img>
                </div>
-               <div className="absolute px-4 1sm:justify-center 1sm:items-center">
+               <div className="absolute 1xl:max-w-4xl 1xl:p-0 1sm:justify-center 1sm:items-center">
                   <p className="text-2xl font-normal drop-shadow-3xl text-white text-center mb-6 pb-6 space-x-0 animate-reavel 1sm:text-xl md:text-5xl ">Hospital Ashford, comprometidos con tu calidad de vida</p> 
                   <p className="text-base leading-6 font-normal drop-shadow-4xl text-white text-center pt-4 space-x-0 animate-reavel 1sm:text-lg">Por 118 años hemos operado de forma continua con los principios de nuestros fundadores como norte: Salud preventiva, vocación al servicio, innovación y trato con calor humano.</p>  
                </div>
