@@ -1,6 +1,7 @@
 import React from 'react'
 import {Arrow, Box, Box1, Box2, Img} from './styles';
 import fondo from '../../img/info-background.png'
+import fondo2 from '../../img/info-background-small.png'
 import arrow_down from '../../img/arrow_down.svg'
 import Indice from '../../img/indice.svg'
 import Indice2 from '../../img/indice2.svg'
@@ -18,18 +19,21 @@ import { Marquee } from '../Marquee';
    const Seccion1=()=>{
       return(
             <div className="flex flex-col justify-center items-center">
-               <img src={fondo} alt="Image background" className="object-fill"></img>
-                  <div className="absolute px-4 1sm:justify-center 1sm:items-center">
-                        <p className="text-2xl font-normal drop-shadow-3xl text-white text-center mb-6 pb-6 space-x-0 animate-reavel 1sm:text-xl md:text-5xl ">Hospital Ashford, comprometidos con tu calidad de vida</p> 
-                        <p className="text-base leading-6 font-normal drop-shadow-4xl text-white text-center pt-4 space-x-0 animate-reavel 1sm:text-lg">Por 118 años hemos operado de forma continua con los principios de nuestros fundadores como norte: Salud preventiva, vocación al servicio, innovación y trato con calor humano.</p>  
+               <div className="2sm:hidden relative overflow-hidden">
+                  <img src={fondo} alt="Image background" className="object-cover"></img>
+               </div>
+               <div className="1sm:hidden 1sm:h-114px relative overflow-hidden w-full h-full">
+                  <img src={fondo2} alt="Image background" className=" object-contain"></img>
+               </div>
+               <div className="absolute px-4 1sm:justify-center 1sm:items-center">
+                  <p className="text-2xl font-normal drop-shadow-3xl text-white text-center mb-6 pb-6 space-x-0 animate-reavel 1sm:text-xl md:text-5xl ">Hospital Ashford, comprometidos con tu calidad de vida</p> 
+                  <p className="text-base leading-6 font-normal drop-shadow-4xl text-white text-center pt-4 space-x-0 animate-reavel 1sm:text-lg">Por 118 años hemos operado de forma continua con los principios de nuestros fundadores como norte: Salud preventiva, vocación al servicio, innovación y trato con calor humano.</p>  
+               </div>
+               <div className="absolute justify-center h-1 bottom-0 1sm:flex">
+                  <div className="sticky bottom-0 pb-8">
+                     <img src={arrow_down} width={25} height={25} alt='arrow'></img>
                   </div>
-                  
-                     <div className="absolute justify-center h-1 bottom-0 1sm:flex">
-                        <div className="sticky bottom-0 pb-8">
-                           <img src={arrow_down} width={25} height={25} alt='arrow'></img>
-                        </div>
-                     </div>
-                  
+               </div>
             </div>
       )
    }
@@ -67,15 +71,21 @@ import { Marquee } from '../Marquee';
 
    const Seccion2=()=>{
       return(
-         <div className="w-full mt-16">
+         <div className="w-full mt-16 text-center">
                   <p className="text-2xl block static z-auto mt-11 text-c_footer text-center font-normal sm:text-4xl">¡Saludos! ¿Cómo podríamos ayudarle?</p>
-            <div className="flex flex-wrap min-h-full justify-center items-stretch py-12 px-20 animate-reavel">
+            <div className="flex flex-wrap min-h-full justify-center items-stretch py-50px px-20">
                {list_seccion2.map((item)=>(
+               <div key={item.id} className={`${ item.id ==='ingreso' ? "animate-reavel"
+                : item.id ==='citas' ? "animate-reavel1" 
+                : item.id ==='emergencia' ? "animate-reavel2"
+                : item.id ==='operacion' ? "animate-reavel3"
+                : ""} 1sm:m-2`}>
                   <Box2>
-                     <img className="ml-32" src={item.img} alt={item.alt} width={20} height={20} ></img>
-                     <p className="my-6 text-lg text-c_footer font-normal not-italic text-center">{item.title}</p>
-                     <p className=" mb-4 mt-0 text-sm text-c_box items-center font-normal not-italic text-center">{item.description}</p>
+                     <img className="ml-32 align-middle items-center" src={item.img} alt={item.alt} width={20} height={20} ></img>
+                     <p className="my-6 text-lg text-c_footer font-normal not-italic text-left 1sm:text-center 1sm:leading-5">{item.title}</p>
+                     <p className="mb-4 mt-0 text-c_box text-xs font-normal not-italic text-center cursor-pointer 1sm:text-sm 1sm:leading-5">{item.description}</p>
                   </Box2> 
+               </div>
                ))}  
             </div>
          </div>  

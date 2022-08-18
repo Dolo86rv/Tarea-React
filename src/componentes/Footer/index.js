@@ -252,7 +252,7 @@ export const Footer = () => {
   return (
     <footer>
       <div className="bg-c_footer w-full" >
-        <div className="w-full max-w-8xl mx-auto pt-10 pb-0 px-4 1sm:pt-16 1sm:px-14 lg:px-28 ">
+        <div className="w-full mx-auto pt-10 pb-0 px-4 1sm:pt-16 1sm:px-14 lg:px-28 ">
           <div className="w-full flex flex-col 1sm:flex-row 1sm:justify-between 1sm:flex-wrap">
             <div className="mb-8 1sm:mb-0 1sm:mr-8 order-1">
               <img src={Logo} width={147} height={56} alt="logo_footer"></img>

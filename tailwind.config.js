@@ -12,7 +12,10 @@ module.exports = {
     extend: {
       animation: {
         marquee: 'marquee 36.25s linear 0s infinite',
-        reavel:'reavel 1s both',
+        reavel:'reavel 1s both 100ms',
+        reavel1:'reavel 1s both 200ms',
+        reavel2:'reavel 1s both 300ms',
+        reavel3:'reavel 1s both 400ms',
         icon:'icon 0.6s ease',
       },
       keyframes: {
@@ -88,6 +91,9 @@ module.exports = {
         '34px':'34px',
         '66px':'66px',
         '42':'42px',
+        '2px':'2px',
+        '50px':'50px',
+        '114':'114px',
       },
       letterSpacing: {
          widest: '.13em',
@@ -115,6 +121,8 @@ module.exports = {
 
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
+      '2sm': {'max': '576px'},
+      // => @media (max-width: 576px) { ... }
     }, 
   },
   variants: {

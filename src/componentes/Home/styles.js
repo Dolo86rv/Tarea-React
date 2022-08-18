@@ -39,18 +39,19 @@ export const Box1=styled.div`
    margin-right:56px;
 `
 export const Box2=styled.div`
+     display:flex;
+     flex-direction: column;
      background-color:var(--white);
      border-radius:6px;
      box-shadow:var(--tw-shddow-1);
      border-width:1px;
      border-color:var(--c-box);
      max-width:330px;
-     max-height:307px;
-     padding-left:27px;
-     padding-right:27px;
+     height:100%;
+     padding-left:24px;
+     padding-right:24px;
      padding-top:48px;
      padding-bottom:48px;
-     margin:8px;
 `
 export const Img=styled.div`
      width:514px;

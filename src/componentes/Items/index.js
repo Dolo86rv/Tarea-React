@@ -308,15 +308,16 @@ export const Items = () => {
     }   
 
   return(
-    <div className="flex flex-row-reverse flex-grow items-center space-x-6 mr-4 mt-10px lg:mt-0">
-        <button className="bg-transparent lg:hidden" aria-label="toggle">
-          <Icons>
-            <img className="mx-4 my-2" src= {menu} width={23} height={23} alt='menu'></img>
-          </Icons>   
-        </button>  
-        <ButtonSearch state={isOpen} open={handleClick} className=""/>
-        {isOpen && <FormSearch show={isOpen}/>}
-
+    <div className="flex flex-row-reverse items-center space-x-6 mr-0 mt-0 lg:mr-4 lg:mt-10px">
+        <div className="flex mx-4">
+          <ButtonSearch state={isOpen} open={handleClick}/>
+          {isOpen && <FormSearch show={isOpen}/>}
+          <button className="bg-transparent lg:hidden" aria-label="toggle">
+            <Icons>
+              <img className="mx-4 my-2" src= {menu} width={23} height={23} alt='menu'></img>
+            </Icons>   
+          </button>  
+        </div>
          <Simple className="hidden lg:block">
            <Link to="/contacto" className="">Contacto</Link>
          </Simple>
