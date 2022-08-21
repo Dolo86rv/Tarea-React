@@ -10,9 +10,13 @@ export const Arrow=styled.div`
      color:#ffffff;
     }
 `
-export const Seccion2=styled.div`
+export const Box3=styled.div`
      width:100%;
-     padding:64px 16px 48px 16px;  
+     background: linear-gradient(180deg, var(--c-ashford) 50%, #ffffff 50%);  
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+     height:500px;
 ` 
 export const Box=styled.div`
    display:flex;

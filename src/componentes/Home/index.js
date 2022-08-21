@@ -1,5 +1,5 @@
 import React from 'react'
-import {Arrow, Box, Box1, Box2, Img} from './styles';
+import {Arrow, Box, Box1, Box2, Box3, Img} from './styles';
 import fondo from '../../img/info-background.png'
 import fondo2 from '../../img/info-background-small.png'
 import arrow_down from '../../img/arrow_down.svg'
@@ -20,18 +20,22 @@ import { Marquee } from '../Marquee';
       return(
             <div className="flex flex-col justify-center items-center">
                <div className="2sm:hidden relative overflow-hidden">
-                  <img src={fondo} alt="Image background" className="object-cover"></img>
+                  <img src={fondo} alt="Image background" className="opacity-100 object-cover"></img>
                </div>
-               <div className="1sm:hidden 1sm:h-114px relative overflow-hidden w-full h-full">
-                  <img src={fondo2} alt="Image background" className=" object-cover w-full"></img>
+               <div className="1sm:hidden 1sm:h-114px relative overflow-hidden w-full h-full opacity-100">
+                  <img src={fondo2} alt="Image background" className="object-cover w-full"></img>
                </div>
-               <div className="absolute 1xl:max-w-4xl 1xl:p-0 1sm:justify-center 1sm:items-center">
-                  <p className="text-2xl font-normal drop-shadow-3xl text-white text-center mb-6 pb-6 space-x-0 animate-reavel 1sm:text-xl md:text-5xl ">Hospital Ashford, comprometidos con tu calidad de vida</p> 
-                  <p className="text-base leading-6 font-normal drop-shadow-4xl text-white text-center pt-4 space-x-0 animate-reavel 1sm:text-lg">Por 118 años hemos operado de forma continua con los principios de nuestros fundadores como norte: Salud preventiva, vocación al servicio, innovación y trato con calor humano.</p>  
+               <div className="flex flex-col justify-end px-4 absolute max-w-9xl 1xl:max-w-4xl 1xl:p-0 1sm:justify-center 1sm:items-center">
+                  <p className="text-2xl font-normal text-bg_gray2 text-left mb-2 max-w-10xl animate-reavel 1sm:text-xl 1sm:text-center 1sm:text-white 1sm:drop-shadow-3xl 1sm:mb-6 md:text-5xl ">Hospital Ashford, comprometidos con tu calidad de vida</p> 
+                  <p className="text-base leading-6 font-normal text-white animate-reavel 1sm:text-lg 1sm:drop-shadow-4xl 1sm:text-center">Por 118 años hemos operado de forma continua con los principios de nuestros fundadores como norte: Salud preventiva, vocación al servicio, innovación y trato con calor humano.</p>  
                </div>
-               <div className="absolute justify-center h-1 bottom-0 1sm:flex">
-                  <div className="sticky bottom-0 pb-8">
-                     <img src={arrow_down} width={25} height={25} alt='arrow'></img>
+               <div className=" w-full flex justify-center py-8">
+                  <div className="hidden absolute items-end h-1 bottom-0 1sm:flex">
+                     <div className="sticky bottom-0 pb-8">
+                        <Link to="/#seccion2">
+                           <img src={arrow_down} width={25} height={25} alt='arrow' className="cursor-pointer"></img>
+                        </Link>
+                     </div>
                   </div>
                </div>
             </div>
@@ -71,7 +75,7 @@ import { Marquee } from '../Marquee';
 
    const Seccion2=()=>{
       return(
-         <div className="w-full mt-16 text-center">
+         <div className="w-full mt-16 text-center" id='seccion2'>
                   <p className="text-2xl block static z-auto mt-11 text-c_footer text-center font-normal sm:text-4xl">¡Saludos! ¿Cómo podríamos ayudarle?</p>
             <div className="flex flex-wrap min-h-full justify-center items-stretch py-50px px-20">
                {list_seccion2.map((item)=>(
@@ -146,55 +150,68 @@ import { Marquee } from '../Marquee';
    ]
    const Seccion4=()=>{
       return(
-         <div className="flex flex-col flex-wrap relative lg:flex-row justify-center items-start w-full -mt-60 opacity-100">
-            {list_story.map((item)=>(
-              <div className="my-4 mr-5" style={{width:341.3}} key={item.id}>
-                  <img src={item.img} className="bg-contain rounded-lg" height={498} width={'100%'}></img>
-                  <div className="flex flex-col justify-end relative pb-10 px-5">
-                     <div className="absolute text-left opacity-100">
-                        <p className=" text-lg font-normal not-italic text-c_story">{item.nombre}</p>
-                        <p className="font-medium text-xs text-white">{item.description}</p>
-                     </div>
-                     <div>
-                        <Link to={item.href} className="text-white">Leer más</Link>
-                     </div>
-                  </div>
-              </div>
-            ))}
-         </div>  
+         <Box3>
+            <div className="flex flex-wrap relative lg:flex-row justify-center items-start w-full opacity-100">
+               <div className="w-full max-w-8xl mx-auto px-4 md:px-10 md:py-10 lg:px-28 lg:py-0">
+                  <div className="list-none mx-auto overflow-hidden p-0 relative z-10 touch-pan-y">
+                     <div className="box-content flex h-full relative transition-transform w-full z-10">
+                       {list_story.map((item)=>(
+                           <div className="flex-shrink-0 h-full relative mr-5" style={{width:336}} key={item.id}>
+                              <img src={item.img} className="object-cover rounded-lg opacity-100" height={498} width={'100%'}></img>
+                              <div className="flex flex-col justify-end items-start rounded-lg relative my-4 w-full max-w-sm">
+                                 <div className="absolute text-left opacity-100">
+                                    <p className=" text-lg font-normal not-italic text-c_story">{item.nombre}</p>
+                                    <p className="font-medium text-xs text-white">{item.description}</p>
+                                 </div>
+                                 <div>
+                                    <Link to={item.href} className="text-white">Leer más</Link>
+                                 </div>
+                              </div>
+                           </div>
+                        ))}
+                        <div className="">
+                           <div className="">
+                              <span className="rounded-lg inline-block h-2 w-2 bg-c_footer mr-1"></span>
+                              <span className="rounded-lg inline-block h-2 w-2 bg-c_footer"></span>
+                           </div>
+                        </div> 
+                     </div>  
+                  </div>         
+               </div>
+            </div>  
+         </Box3>   
       )
    }
    
    const Seccion3=()=>{
       return(
-         <div className="w-full bg-ashford" style={{height:825}}>
-               <div className="flex flex-row flex-wrap justify-center">
-                  <div className="mt-12 ml-28 rounded-md">
-                     <img className="bg-contain" src={Interest} width={514} height={750}></img>
+         <div className="bg-ashford">
+            <div className="w-full max-w-8xl mx-auto pb-12 md:py-12 md:px-10 lg:px-28 ">
+               <div className="flex flex-wrap relative justify-center items-start w-full">
+                  <div className="flex p-0 w-full relative overflow-hidden md:w-1/2 md:rounded-md">
+                     <img className="bg-cover h-full" src={Interest} width={514} height={750}></img>
                   </div>
-                  <div className="flex flex-col flex-1 mt-14 ml-12 mr-28">
-                     <p className="font-bold space-x-5 text-s text-turquee uppercase">Datos de interés</p>
-                     <p className="font-normal not-italic text-5xl text-bg_gray2 my-5">¡En el Hospital Ashford estamos para servirles!</p>
-                     <p className="font-normal not-italic text-1xl text-turquee mb-10">Nuestra misión es proveer servicios médicos hospitalarios de excelencia con calor humano con empatía y compasión</p>
-                     <div className="grid grid-cols-2 gap-5">
-                        {list_datos_interes.map((item)=>(
-                          <div key={item.id}>
-                              <div>
-                                 <p className=" text-white font-normal text-5xl">{item.estadisticas}</p>
-                              </div>
-                              <div>
-                                 <p className=" text-white font-medium text-base mb-0 mt-2">{item.description}</p>
-                              </div>
-                          </div>
-                        ))}
-                     </div>
+                  <div className="flex flex-col justify-center w-full px-4 md:p-0 md:w-1/2">
+                     <p className="font-normal text-sm text-turquee uppercase leading-5 1sm:font-bold 1sm:text-s 1sm:leading-4">Datos de interés</p>
+                     <p className="font-normal not-italic text-2xl leading-7 my-18px 1sm:text-5xl 1sm:leading-11 text-bg_gray2 ">¡En el Hospital Ashford estamos para servirles!</p>
+                     <p className="font-normal not-italic text-1xl text-turquee mb-8">Nuestra misión es proveer servicios médicos hospitalarios de excelencia con calor humano con empatía y compasión</p>
+                     <div className="grid grid-cols-2 gap-y-8 gap-x-12">
+                     {list_datos_interes.map((item)=>(
+                        <div key={item.id}>
+                           <div>
+                              <p className=" text-white font-normal text-5xl">{item.estadisticas}</p>
+                           </div>
+                           <div>
+                              <p className=" text-white font-medium text-base mb-0 mt-2">{item.description}</p>
+                           </div>
+                        </div>
+                     ))}
                   </div>
-                 
                </div>
-               
-          </div>
-      )
-   }   
+            </div>  
+         </div>     
+      </div>
+   )}   
 
    const list_especialidades=[
       {
@@ -268,8 +285,8 @@ import { Marquee } from '../Marquee';
    const Seccion5=()=>{
       return(
          <div className="max-w-full bg-white">
-            <Seccion4 />
-            <div className="flex flex-col ml-auto mr-auto mt-72">
+            
+            <div className="flex flex-col ml-auto mr-auto">
                <p className="text-center text-c_footer font-normal text-xl not-italic py-16">Especialidades</p>
                <div className="flex flex-wrap flex-col justify-center mx-2 items-center md:flex-row min-h-full">
                   {list_especialidades.map((item)=>(
@@ -358,9 +375,33 @@ export const Home = () => {
          <Seccion1 />
          <Seccion2 /> 
          <Seccion3 />
+         <Seccion4 />
          <Seccion5 />
          <Seccion6 />
       </div>
   )}
 
 
+/*const Seccion4=()=>{
+      return(
+         <div className="flex flex-col flex-wrap relative lg:flex-row justify-center items-start w-full -mt-60 opacity-100">
+            {list_story.map((item)=>(
+              <div className="my-4 mr-5" style={{width:341.3}} key={item.id}>
+                  <img src={item.img} className="bg-contain rounded-lg" height={498} width={'100%'}></img>
+                  <div className="flex flex-col justify-end relative pb-10 px-5">
+                     <div className="absolute text-left opacity-100">
+                        <p className=" text-lg font-normal not-italic text-c_story">{item.nombre}</p>
+                        <p className="font-medium text-xs text-white">{item.description}</p>
+                     </div>
+                     <div>
+                        <Link to={item.href} className="text-white">Leer más</Link>
+                     </div>
+                  </div>
+              </div>
+            ))}
+         </div>  
+      )
+   }
+   
+   
+   */

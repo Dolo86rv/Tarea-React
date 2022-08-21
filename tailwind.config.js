@@ -40,6 +40,8 @@ module.exports = {
       },
       maxWidth: {
         '8xl': '1440px',
+        '9xl':'791px',
+        '10xl':'960px',
       },
       width: {
         'fit':'fit-content',
@@ -82,18 +84,23 @@ module.exports = {
             lineHeight: '16px',
           }],
       },
+      lineHeight: {
+        '11': '48px',
+      },
       margin: {
         '34': '140px',
       },
       spacing: {
         '5px': '5px',
         '10px':'10px',
+        '18px':'18px',
         '34px':'34px',
         '66px':'66px',
         '42':'42px',
         '2px':'2px',
         '50px':'50px',
         '114':'114px',
+      
       },
       letterSpacing: {
          widest: '.13em',
