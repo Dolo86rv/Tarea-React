@@ -11,10 +11,10 @@ const handleClickSearch=()=>{
      setIsShow(!isShow)   
 }
 return isShow ? (
-     <form role="search" action="/resultados" method="" className="flex items-center mx-1 py-1 px-3 w-full h-fit border border-solid border-turquee box-border rounded-sm">
+     <form role="search" action="/resultados" method="" className="flex items-center p-2 w-full h-fit border border-solid border-turquee box-border rounded-sm transition-all ease-linear duration-700">
           <img className="cursor-pointer box-border w-13px h-18px hover:scale-100" src={lupa} alt='search'></img>
           <div className="flex w-48 items-center overflow-hidden">
-               <input type="text" placeholder="Buscar" name="s" className="border-0 mx-10px box-border h-fit w-full"></input>
+               <input type="text" placeholder="Buscar" name="s" className="border-0 mx-10px box-border p-0 h-fit w-full"></input>
                <img className="cursor-pointer hover:scale-100" src={close} onClick={handleClickSearch} /> 
                {!isShow && <ButtonSearch state={isShow} open={handleClickSearch} />}
           </div>

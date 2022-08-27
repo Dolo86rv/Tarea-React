@@ -311,8 +311,8 @@ export const Items = () => {
           <Item title="Sobre nosotros" subMenu={sobreNosotros_html()} />
           <Link to="/contacto" className="hidden lg:block text-c_text normal-case font-normal text-sm not-italic leading-5 hover:text-turquee transition-colors ease-in-out duration-150 px-2 text-left lg:static">Contacto</Link>
         </div>
-        <div className="flex box-border lg:px-2 lg:pb-2">
-          <ButtonSearch state={isOpen} open={handleClick} className="hidden mx-1 py-1 px-3 leading-4 lg:block"/>
+        <div className="flex items-center box-border mx-1 py-2 px-3">
+          <ButtonSearch state={isOpen} open={handleClick} className="hidden leading-4 lg:block"/>
           {isOpen && <FormSearch show={isOpen}/>}
           <button type='button' className="bg-transparent rounded text-1xl py-1 px-3 lg:hidden hover:scale-100" aria-label="toggle">
             <img className="w-7 h-7 align-middle bg-center bg-cover" src= {menu} alt='menu' />
@@ -320,24 +320,3 @@ export const Items = () => {
         </div>
       </div>    
   )}
-
-
-
-  /*
-  <div className="flex flex-row-reverse box-border items-center flex-grow space-x-6 lg:h-full">
-  
-  <Simple className="hidden lg:block">
-          <Link to="/contacto" className="">Contacto</Link>
-        </Simple>
-        <Links className="hidden lg:block">
-          <Item title="Sobre nosotros" subMenu={sobreNosotros_html()}></Item>
-        </Links>
-        <Links className="hidden lg:block"> 
-          <Item title="Para pacientes" subMenu={paraPacientes_html()}></Item>
-        </Links>
-        <Simple className="hidden lg:block">
-          <Link to="/salaemergencia" className=" decoration-inherit">Sala de emergencia</Link>
-        </Simple>
-        <Links className="hidden lg:block">
-          <Item title="Servicios y especialidades" subMenu={serviciosEspecialidades_html()}></Item>
-        </Links>*/

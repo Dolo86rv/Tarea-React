@@ -79,10 +79,10 @@ import { Marquee } from '../Marquee';
             <div className="flex flex-wrap min-h-full justify-center items-stretch py-50px px-20">
                {list_seccion2.map((item)=>(
                <div key={item.id} className={`${ item.id ==='ingreso' ? "animate-reavel"
-                : item.id ==='citas' ? "animate-reavel1" 
-                : item.id ==='emergencia' ? "animate-reavel2"
-                : item.id ==='operacion' ? "animate-reavel3"
-                : ""} 1sm:m-2`}>
+               : item.id ==='citas' ? "animate-reavel1" 
+               : item.id ==='emergencia' ? "animate-reavel2"
+               : item.id ==='operacion' ? "animate-reavel3"
+               : ""} 1sm:m-2`}>
                   <Box2>
                      <img className="ml-32 align-middle items-center" src={item.img} alt={item.alt} width={20} height={20} ></img>
                      <p className="my-6 text-lg text-c_footer font-normal not-italic text-left 1sm:text-center 1sm:leading-5">{item.title}</p>
@@ -153,7 +153,7 @@ import { Marquee } from '../Marquee';
             <div className="w-full max-w-8xl mx-auto px-4 md:px-10 md:py-10 lg:px-28 lg:py-0">
                <div className="list-none mx-auto overflow-hidden p-0 relative z-10 touch-pan-y">
                   <div className="flex box-content h-full relative transition-transform w-full z-10">
-                    {list_story.map((item)=>(
+                  {list_story.map((item)=>(
                         <div className="justify-center mr-5 h-full" style={{width:334}} key={item.id}>
                               <img src={item.img} className="object-cover rounded-lg opacity-100"></img>
                               <div className="flex flex-col justify-end items-start rounded-lg relative my-4 w-full">
@@ -166,7 +166,7 @@ import { Marquee } from '../Marquee';
                                  </div>
                               </div>
                            </div>
-                        ))}   
+                  ))}   
                   </div>  
                   <div className="">
                      <div className="">
@@ -288,14 +288,14 @@ import { Marquee } from '../Marquee';
                <p className="text-center text-c_footer font-normal text-xl not-italic py-16">Especialidades</p>
                <div className="flex flex-wrap flex-col justify-center mx-2 items-center md:flex-row min-h-full">
                   {list_especialidades.map((item)=>(
-                    <Link key={item.id} className="block w-48 h-36 pb-3" to={item.href}>
-                        <Box1>
-                           <p className="not-italic font-normal leading-6 text-center text-bg_gray2 m-0">{item.siglas}</p>
-                        </Box1>
-                        <div className="block h-5 w-44 ml-0">
-                           <p className="not-italic font-normal text-c_footer py-4 text-center text-sm">{item.description}</p>
-                        </div>
-                    </Link>
+                  <Link key={item.id} className="block w-48 h-36 pb-3" to={item.href}>
+                     <Box1>
+                        <p className="not-italic font-normal leading-6 text-center text-bg_gray2 m-0">{item.siglas}</p>
+                     </Box1>
+                     <div className="block h-5 w-44 ml-0">
+                        <p className="not-italic font-normal text-c_footer py-4 text-center text-sm">{item.description}</p>
+                     </div>
+                  </Link>
                   ))}
                </div>
             </div>
@@ -366,25 +366,25 @@ import { Marquee } from '../Marquee';
       )}
 
 export const Home = () => {
-  
-  return (
-      <div className="flex flex-col w-full bg-gray-200">
-         <Marquee />
-         <Seccion1 />
-         <Seccion2 /> 
-         <Seccion3 />
-         <Seccion4 />
-         <Seccion5 />
-         <Seccion6 />
-      </div>
-  )}
+
+return (
+   <div className="flex flex-col w-full bg-gray-200">
+      <Marquee />
+      <Seccion1 />
+      <Seccion2 /> 
+      <Seccion3 />
+      <Seccion4 />
+      <Seccion5 />
+      <Seccion6 />
+   </div>
+)}
 
 
 /*const Seccion4=()=>{
       return(
          <div className="flex flex-col flex-wrap relative lg:flex-row justify-center items-start w-full -mt-60 opacity-100">
             {list_story.map((item)=>(
-              <div className="my-4 mr-5" style={{width:341.3}} key={item.id}>
+            <div className="my-4 mr-5" style={{width:341.3}} key={item.id}>
                   <img src={item.img} className="bg-contain rounded-lg" height={498} width={'100%'}></img>
                   <div className="flex flex-col justify-end relative pb-10 px-5">
                      <div className="absolute text-left opacity-100">
@@ -406,7 +406,7 @@ export const Home = () => {
                <div className="w-full max-w-8xl mx-auto px-4 md:px-10 md:py-10 lg:px-28 lg:py-0">
                   <div className="list-none mx-auto overflow-hidden p-0 relative z-10 touch-pan-y">
                      <div className="box-content flex h-full relative transition-transform w-full z-10" style={{width:'341.333'}}>
-                       {list_story.map((item)=>(
+                     {list_story.map((item)=>(
                            <div className="flex-shrink-0 h-full relative mr-5" key={item.id}>
                               <img src={item.img} className="object-cover rounded-lg opacity-100"></img>
                               <div className="flex flex-col justify-end items-start rounded-lg relative my-4 w-full">
