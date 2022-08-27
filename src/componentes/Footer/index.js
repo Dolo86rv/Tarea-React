@@ -8,8 +8,8 @@ const Links=()=>{
       <div className="w-fit text-lg font-normal mb-2">
             <div className="cursor-pointer">
               {list_enlaces.map((item)=>(
-                <ul>
-                  <li className="flex">
+                <ul key={item.id}>
+                  <li className="flex" key={item.id}>
                     <Link key={item.id} to={item.href}>{item.description}</Link> 
                     <img className="leading-7 ml-3 hover:translate-x-6" src={"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNyAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjM5MzMgOC40OTM0MkMxNi4zMjk5IDguMzI5NzUgMTYuMjM0NyA4LjE4MDIyIDE2LjExMzMgOC4wNTM0Mkw5LjQ0NjY3IDEuMzg2NzVDOS4zMjIzNSAxLjI2MjQzIDkuMTc0NzYgMS4xNjM4MiA5LjAxMjMzIDEuMDk2NTRDOC44NDk5IDEuMDI5MjYgOC42NzU4MSAwLjk5NDYyOSA4LjUgMC45OTQ2MjlDOC4xNDQ5MyAwLjk5NDYyOSA3LjgwNDQxIDEuMTM1NjggNy41NTMzMyAxLjM4Njc1QzcuNDI5MDIgMS41MTEwNyA3LjMzMDQgMS42NTg2NiA3LjI2MzEyIDEuODIxMDlDNy4xOTU4NCAxLjk4MzUxIDcuMTYxMjEgMi4xNTc2MSA3LjE2MTIxIDIuMzMzNDJDNy4xNjEyMSAyLjY4ODQ5IDcuMzAyMjYgMy4wMjkwMSA3LjU1MzMzIDMuMjgwMDhMMTEuOTUzMyA3LjY2Njc1SDEuODMzMzNDMS40Nzk3MSA3LjY2Njc1IDEuMTQwNTcgNy44MDcyMyAwLjg5MDUyNSA4LjA1NzI4QzAuNjQwNDc2IDguMzA3MzIgMC41IDguNjQ2NDYgMC41IDkuMDAwMDhDMC41IDkuMzUzNzEgMC42NDA0NzYgOS42OTI4NCAwLjg5MDUyNSA5Ljk0Mjg5QzEuMTQwNTcgMTAuMTkyOSAxLjQ3OTcxIDEwLjMzMzQgMS44MzMzMyAxMC4zMzM0SDExLjk1MzNMNy41NTMzMyAxNC43MjAxQzcuNDI4MzYgMTQuODQ0IDcuMzI5MTcgMTQuOTkxNSA3LjI2MTQ4IDE1LjE1NEM3LjE5Mzc5IDE1LjMxNjUgNy4xNTg5NCAxNS40OTA3IDcuMTU4OTQgMTUuNjY2N0M3LjE1ODk0IDE1Ljg0MjggNy4xOTM3OSAxNi4wMTcgNy4yNjE0OCAxNi4xNzk1QzcuMzI5MTcgMTYuMzQyIDcuNDI4MzYgMTYuNDg5NSA3LjU1MzMzIDE2LjYxMzRDNy42NzcyOCAxNi43Mzg0IDcuODI0NzUgMTYuODM3NiA3Ljk4NzIzIDE2LjkwNTNDOC4xNDk3MSAxNi45NzMgOC4zMjM5OCAxNy4wMDc4IDguNSAxNy4wMDc4QzguNjc2MDIgMTcuMDA3OCA4Ljg1MDI5IDE2Ljk3MyA5LjAxMjc3IDE2LjkwNTNDOS4xNzUyNSAxNi44Mzc2IDkuMzIyNzIgMTYuNzM4NCA5LjQ0NjY3IDE2LjYxMzRMMTYuMTEzMyA5Ljk0Njc1QzE2LjIzNDcgOS44MTk5NSAxNi4zMjk5IDkuNjcwNDIgMTYuMzkzMyA5LjUwNjc1QzE2LjUyNjcgOS4xODIxNCAxNi41MjY3IDguODE4MDMgMTYuMzkzMyA4LjQ5MzQyWiIgZmlsbD0iIzNFQjFDOCIvPgo8L3N2Zz4K"}  width={12} height={12}></img>
                   </li>
@@ -237,8 +237,8 @@ const Internet=()=>{
          <p className="text-lg font-medium text-turquee pb-4">Para pacientes</p>
           <div className="pb-2 text-white">
                {list_pacientes.map((items)=>(
-                 <ul className="py-1">
-                   <li className="w-fit">
+                 <ul className="py-1" key={items.id}>
+                   <li className="w-fit" key={items.id}>
                      <Link to={items.href} className="hover:text-turquee font-medium text-sm" key={items.id}>{items.description}</Link>
                    </li>
                  </ul>
@@ -253,7 +253,7 @@ export const Footer = () => {
     <footer>
       <div className="bg-c_footer w-full" >
         <div className="w-full mx-auto pt-10 pb-0 px-4 1sm:pt-16 1sm:px-14 lg:px-28 ">
-          <div className="w-full flex flex-col 1sm:flex-row 1sm:justify-between 1sm:flex-wrap">
+          <div className="flex flex-col flex-wrap 1sm:flex-row 1sm:justify-between 1lg:flex-nowrap">
             <div className="mb-8 1sm:mb-0 1sm:mr-8 order-1">
               <img src={Logo} width={147} height={56} alt="logo_footer"></img>
               <p className="text-lg font-medium text-white pt-8">Ashford Hospital</p>

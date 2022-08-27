@@ -1,16 +1,14 @@
 import React from 'react'
-import { Icons } from './styles'
 import lupa from '../../img/lupa.svg' 
 
 export const ButtonSearch = ({open, state}) => {
     
   return !state ? (
-          <button onClick={open} className="bg-transparent" aria-label="Search" >
-            <Icons>
-               <img className="cursor-pointer lg:h-4 lg:w-4" src= {lupa} width={23} height={23} alt='search'></img>
-            </Icons>
-          </button>
+    <button type="button" onClick={open} className="flex bg-transparent mx-1 px-3 py-1 items-center hover:scale-100" aria-label="Search" >
+      <img className="w-7 h-7 lg:w-18px lg:h-18px align-middle bg-center bg-cover" src= {lupa} alt='search'></img>          
+    </button>
     ):(
           <></>
     )
 }
+/*hover:bg-blue-300 transition-colors duration-200 delay-200  text-white py-4 px-8 rounded text-xl*/

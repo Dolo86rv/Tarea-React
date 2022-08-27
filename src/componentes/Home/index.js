@@ -1,5 +1,5 @@
 import React from 'react'
-import {Arrow, Box, Box1, Box2, Box3, Img} from './styles';
+import {Box, Box1, Box2, Box3} from './styles';
 import fondo from '../../img/info-background.png'
 import fondo2 from '../../img/info-background-small.png'
 import arrow_down from '../../img/arrow_down.svg'
@@ -39,8 +39,7 @@ import { Marquee } from '../Marquee';
                   </div>
                </div>
             </div>
-      )
-   }
+      )}
 
    const list_seccion2=[
       {
@@ -151,14 +150,13 @@ import { Marquee } from '../Marquee';
    const Seccion4=()=>{
       return(
          <Box3>
-            <div className="flex flex-wrap relative lg:flex-row justify-center items-start w-full opacity-100">
-               <div className="w-full max-w-8xl mx-auto px-4 md:px-10 md:py-10 lg:px-28 lg:py-0">
-                  <div className="list-none mx-auto overflow-hidden p-0 relative z-10 touch-pan-y">
-                     <div className="box-content flex h-full relative transition-transform w-full z-10">
-                       {list_story.map((item)=>(
-                           <div className="flex-shrink-0 h-full relative mr-5" style={{width:336}} key={item.id}>
-                              <img src={item.img} className="object-cover rounded-lg opacity-100" height={498} width={'100%'}></img>
-                              <div className="flex flex-col justify-end items-start rounded-lg relative my-4 w-full max-w-sm">
+            <div className="w-full max-w-8xl mx-auto px-4 md:px-10 md:py-10 lg:px-28 lg:py-0">
+               <div className="list-none mx-auto overflow-hidden p-0 relative z-10 touch-pan-y">
+                  <div className="flex box-content h-full relative transition-transform w-full z-10">
+                    {list_story.map((item)=>(
+                        <div className="justify-center mr-5 h-full" style={{width:334}} key={item.id}>
+                              <img src={item.img} className="object-cover rounded-lg opacity-100"></img>
+                              <div className="flex flex-col justify-end items-start rounded-lg relative my-4 w-full">
                                  <div className="absolute text-left opacity-100">
                                     <p className=" text-lg font-normal not-italic text-c_story">{item.nombre}</p>
                                     <p className="font-medium text-xs text-white">{item.description}</p>
@@ -168,16 +166,16 @@ import { Marquee } from '../Marquee';
                                  </div>
                               </div>
                            </div>
-                        ))}
-                        <div className="">
-                           <div className="">
-                              <span className="rounded-lg inline-block h-2 w-2 bg-c_footer mr-1"></span>
-                              <span className="rounded-lg inline-block h-2 w-2 bg-c_footer"></span>
-                           </div>
-                        </div> 
-                     </div>  
-                  </div>         
-               </div>
+                        ))}   
+                  </div>  
+                  <div className="">
+                     <div className="">
+                        <span className="active: bg-c_footer rounded-lg inline-block h-2 w-2 mr-1"></span>
+                        <span className="rounded-lg inline-block h-2 w-2 bg-gray-400"></span>
+                     </div>
+                  </div> 
+               </div>         
+               
             </div>  
          </Box3>   
       )
@@ -403,5 +401,49 @@ export const Home = () => {
       )
    }
    
-   
+   <Box3>
+            <div className="flex flex-wrap relative lg:flex-row justify-center items-start w-full opacity-100">
+               <div className="w-full max-w-8xl mx-auto px-4 md:px-10 md:py-10 lg:px-28 lg:py-0">
+                  <div className="list-none mx-auto overflow-hidden p-0 relative z-10 touch-pan-y">
+                     <div className="box-content flex h-full relative transition-transform w-full z-10" style={{width:'341.333'}}>
+                       {list_story.map((item)=>(
+                           <div className="flex-shrink-0 h-full relative mr-5" key={item.id}>
+                              <img src={item.img} className="object-cover rounded-lg opacity-100"></img>
+                              <div className="flex flex-col justify-end items-start rounded-lg relative my-4 w-full">
+                                 <div className="absolute text-left opacity-100">
+                                    <p className=" text-lg font-normal not-italic text-c_story">{item.nombre}</p>
+                                    <p className="font-medium text-xs text-white">{item.description}</p>
+                                 </div>
+                                 <div>
+                                    <Link to={item.href} className="text-white">Leer más</Link>
+                                 </div>
+                              </div>
+                           </div>
+                        ))}
+                        <div className="">
+                           <div className="">
+                              <span className="rounded-lg inline-block h-2 w-2 bg-c_footer mr-1"></span>
+                              <span className="rounded-lg inline-block h-2 w-2 bg-c_footer"></span>
+                           </div>
+                        </div> 
+                     </div>  
+                  </div>         
+               </div>
+            </div>  
+         </Box3>
+
+         {list_story.map((item)=>(
+                           <div className="flex-shrink-0 justify-center transition-transform h-full relative mr-5 w-80" key={item.id}>
+                              <img src={item.img} className="object-cover rounded-lg opacity-100"></img>
+                              <div className="flex flex-col justify-end items-start rounded-lg relative my-4 w-full">
+                                 <div className="absolute text-left opacity-100">
+                                    <p className=" text-lg font-normal not-italic text-c_story">{item.nombre}</p>
+                                    <p className="font-medium text-xs text-white">{item.description}</p>
+                                 </div>
+                                 <div>
+                                    <Link to={item.href} className="text-white">Leer más</Link>
+                                 </div>
+                              </div>
+                           </div>
+                        ))}
    */

@@ -2,11 +2,11 @@ import React from 'react'
 import { HashLink as Link } from 'react-router-hash-link'
 import lupa from '../../img/lupa.svg'
 import { ButtonSearch } from './ButtonSearch'
-import { Links, Icons, Simple } from './styles'
 import { useState } from 'react'
 import { Item } from '../Item'
 import { FormSearch } from './FormSearch'
 import  menu from '../../img/menu.svg'
+
 
 
 // Menu Servicio y Especilaidades..........
@@ -164,11 +164,11 @@ const serviciosEspecialidades_html=()=>{
         {servicios_especialidades.map((item) => (
           <div className="grid grid-cols-2 gap-2 space-y-1 border-l border-c_border capitalize pl-8 w-2/3" key={item.id}>
             <div className=" col-span-2">
-               <Link className="text-lg font-medium text-turquee" to={item.href}>{item.description}</Link>
-             </div>
+              <Link className="text-lg font-medium text-turquee" to={item.href}>{item.description}</Link>
+            </div>
             {item.sub_menu.map((sub_item) => (
               <ul key={sub_item.id} className="mr-1">
-                 <Link to={sub_item.href} className="text-sm font-normal text-c_text hover:text-turquee normal-case">{sub_item.description}</Link >
+                <Link to={sub_item.href} className="ext-c_text normal-case font-normal text-sm not-italic leading-5 hover:text-turquee transition-colors ease-in-out duration-150">{sub_item.description}</Link >
               </ul>
               ))
             }
@@ -202,7 +202,7 @@ const serviciosEspecialidades_html=()=>{
   
     return(
       <div className="grid grid-cols-3 ">
-         <div className="ml-6"> 
+        <div className="ml-6"> 
             <div className="text-2xl text-c_text">
                 Sobre Nostros
             </div>
@@ -216,7 +216,7 @@ const serviciosEspecialidades_html=()=>{
 
             {item.sub_menu.map((subItem)=>(
               <div key={subItem.id}>
-                <Link key={subItem.id} to={subItem.href} className="text-c_text hover:text-turquee normal-case">{subItem.description}</Link>
+                <Link key={subItem.id} to={subItem.href} className="ext-c_text normal-case font-normal text-sm not-italic leading-5 hover:text-turquee transition-colors ease-in-out duration-150">{subItem.description}</Link>
               </div>
             ))}
           </div>
@@ -271,7 +271,7 @@ const para_pacientes=[
     }]
 
 const paraPacientes_html=()=>{
-     
+  
   return (
     <div className="grid grid-cols-3">
       <div className="ml-6">
@@ -285,63 +285,59 @@ const paraPacientes_html=()=>{
       {para_pacientes.map((item)=>(
         <div className="space-y-2 border-l border-c_border capitalize pl-8 w-2/3"  key={item.id} >
           <Link key={item.id} to={item.href} className="text-lg text-turquee">{item.description}</Link>
-
           {item.sub_menu.map((subMenu)=>(
             <ul key={subMenu.id}>
-              <Links>
-                 <Link key={subMenu.id} to={subMenu.href} className="text-c_text hover:text-turquee normal-case">{subMenu.description}</Link>
-              </Links>
+              <Link key={subMenu.id} to={subMenu.href} className="ext-c_text normal-case font-normal text-sm not-italic leading-5 hover:text-turquee transition-colors ease-in-out duration-150">{subMenu.description}</Link>
             </ul>
           ))}
         </div>
       ))}
     </div>
-    )
-  
-    }
+    )}
     
 export const Items = () => {
     const [isOpen, setIsOpen]=useState(false)
 
     const handleClick=()=>{
-       setIsOpen(!isOpen)
+      setIsOpen(!isOpen)
     }   
 
   return(
-    <div className="flex flex-row-reverse items-center space-x-6 mr-0 mt-0 lg:mr-4 lg:mt-10px">
-        <div className="flex mx-4">
-          <ButtonSearch state={isOpen} open={handleClick}/>
+      <div className="flex box-border">
+        <div className="flex box-border items-center lg:h-full">
+          <Item title="Servicios y especialidades" subMenu={serviciosEspecialidades_html()} />
+          <Link to="/salaemergencia" className="hidden lg:block text-c_text normal-case font-normal text-sm not-italic leading-5 hover:text-turquee transition-colors ease-in-out duration-150 px-2 py-2 text-left lg:static">Sala de emergencia</Link>
+          <Item title="Para pacientes" subMenu={paraPacientes_html()} />
+          <Item title="Sobre nosotros" subMenu={sobreNosotros_html()} />
+          <Link to="/contacto" className="hidden lg:block text-c_text normal-case font-normal text-sm not-italic leading-5 hover:text-turquee transition-colors ease-in-out duration-150 px-2 text-left lg:static">Contacto</Link>
+        </div>
+        <div className="flex box-border lg:px-2 lg:pb-2">
+          <ButtonSearch state={isOpen} open={handleClick} className="hidden mx-1 py-1 px-3 leading-4 lg:block"/>
           {isOpen && <FormSearch show={isOpen}/>}
-          <button className="bg-transparent lg:hidden" aria-label="toggle">
-            <Icons>
-              <img className="mx-4 my-2" src= {menu} width={23} height={23} alt='menu'></img>
-            </Icons>   
+          <button type='button' className="bg-transparent rounded text-1xl py-1 px-3 lg:hidden hover:scale-100" aria-label="toggle">
+            <img className="w-7 h-7 align-middle bg-center bg-cover" src= {menu} alt='menu' />
           </button>  
         </div>
-         <Simple className="hidden lg:block">
-           <Link to="/contacto" className="">Contacto</Link>
-         </Simple>
-         <Links className="hidden lg:block">
-           <Item title="Sobre nosotros" subMenu={sobreNosotros_html()}></Item>
-         </Links>
-         <Links className="hidden lg:block"> 
-           <Item title="Para pacientes" subMenu={paraPacientes_html()}></Item>
-          </Links>
-          <Simple className="hidden lg:block">
-             <Link to="/salaemergencia" className=" decoration-inherit">Sala de emergencia</Link>
-          </Simple>
-          <Links className="hidden lg:block">
-           <Item title="Servicios y especialidades" subMenu={serviciosEspecialidades_html()}></Item>
-          </Links>
-         
-      </div>
-  )
-}
+      </div>    
+  )}
 
-/*<button className="bg-transparent lg:hidden" aria-label="toggle">
-          <Icons>
-            <img className="mx-4 my-2" src= {menu} width={23} height={23} alt='menu'></img>
-          </Icons>   
-        </button>  
-        <ButtonSearch state={isOpen} open={handleClick} />
-        {isOpen && <FormSearch show={isOpen}/>}*/
+
+
+  /*
+  <div className="flex flex-row-reverse box-border items-center flex-grow space-x-6 lg:h-full">
+  
+  <Simple className="hidden lg:block">
+          <Link to="/contacto" className="">Contacto</Link>
+        </Simple>
+        <Links className="hidden lg:block">
+          <Item title="Sobre nosotros" subMenu={sobreNosotros_html()}></Item>
+        </Links>
+        <Links className="hidden lg:block"> 
+          <Item title="Para pacientes" subMenu={paraPacientes_html()}></Item>
+        </Links>
+        <Simple className="hidden lg:block">
+          <Link to="/salaemergencia" className=" decoration-inherit">Sala de emergencia</Link>
+        </Simple>
+        <Links className="hidden lg:block">
+          <Item title="Servicios y especialidades" subMenu={serviciosEspecialidades_html()}></Item>
+        </Links>*/

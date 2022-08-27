@@ -1,19 +1,34 @@
 import React from 'react'
-import { Icons } from './styles'
+import close from '../../img/close.svg'  
 import lupa from '../../img/lupa.svg'  
 import { useState } from 'react'
 import { ButtonSearch } from './ButtonSearch'
 
 export const FormSearch = ({show}) => {
-    const [isShow, setIsShow]=useState(show)
-    
+const [isShow, setIsShow]=useState(show)
 
-    const handleClickSearch=()=>{
-         setIsShow(!isShow)   
-    }
-    
-    return isShow ? (
-        <button className="px-3 py-1 mx-1 bg-transparent border border-solid border-turquee box-border rounded-sm text-lg transition-shadow duration-150 ease-in-out" label="Search">
+const handleClickSearch=()=>{
+     setIsShow(!isShow)   
+}
+return isShow ? (
+     <form role="search" action="/resultados" method="" className="flex items-center mx-1 py-1 px-3 w-full h-fit border border-solid border-turquee box-border rounded-sm">
+          <img className="cursor-pointer box-border w-13px h-18px hover:scale-100" src={lupa} alt='search'></img>
+          <div className="flex w-48 items-center overflow-hidden">
+               <input type="text" placeholder="Buscar" name="s" className="border-0 mx-10px box-border h-fit w-full"></input>
+               <img className="cursor-pointer hover:scale-100" src={close} onClick={handleClickSearch} /> 
+               {!isShow && <ButtonSearch state={isShow} open={handleClickSearch} />}
+          </div>
+     </form>
+
+) : (
+     <ButtonSearch state={isShow} open={handleClickSearch} />
+     )
+}
+
+
+/*<img className="cursor-pointer h-3 my-2" src={lupa} width={10} height={10} alt='search'></img>
+
+<button className="px-3 py-1 mx-1 bg-transparent border border-solid border-turquee box-border rounded-sm text-lg transition-shadow duration-150 ease-in-out" label="Search">
           <form role="search" action="/resultados" method="" className="flex items-center mx-10px my-0 p-0 w-full h-fit">
           <img className="cursor-pointer" src={lupa} width={13} height={13} alt='search'></img>
           <div className="flex">
@@ -23,10 +38,15 @@ export const FormSearch = ({show}) => {
           </div>
           </form>
        </button>
-    ) : (
-        <ButtonSearch state={isShow} open={handleClickSearch} />
-        )
-}
+
+<form role="search" action="/resultados" method="" className="flex items-center mx-10px my-0 p-0 w-full h-fit border border-solid border-turquee box-border rounded-sm">
+          <img className="cursor-pointer" src={lupa} width={13} height={13} alt='search'></img>
+          <div className="flex">
+               <input type="text" placeholder="Buscar" name="s" className="text-sm"></input>
+               <img src={close} onClick={handleClickSearch} /> 
+               {!isShow && <ButtonSearch state={isShow} open={handleClickSearch} />}
+          </div>
+     </form>
+       */
 
 
-/*<img className="cursor-pointer h-3 my-2" src={lupa} width={10} height={10} alt='search'></img>*/

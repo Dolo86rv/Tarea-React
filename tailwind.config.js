@@ -73,14 +73,11 @@ module.exports = {
         '3xl': '0 0px 6px rgba(0, 0, 0, 0.2)',
         '4xl':'0 0px 10px rgba(0, 0, 0, 0.15)'
       },
-      fontFamily:{
-        'Futura-Std':['Futura Std-Book'],
-      },
       fontSize: {
         'xl':['32px','40px'],
         '1xl':['20px','21.6px'],
         '2sm':['24px','32px'],
-         's': ['10px', {
+        's': ['10px', {
             lineHeight: '16px',
           }],
       },
@@ -100,21 +97,22 @@ module.exports = {
         '2px':'2px',
         '50px':'50px',
         '114':'114px',
-      
+        '104px':'104px', 
+        '13px':'13px',     
       },
       letterSpacing: {
-         widest: '.13em',
+        widest: '.13em',
       },  
-     backgroundImage:theme=>({
+    backgroundImage:theme=>({
       'imagen_fondo':'url(./img/info-background.png)'
-     })  
+    })  
     },
     screens: {
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
       'ssm':'330px',
       '1sm':'576px',
-       's':'244px',
+      's':'244px',
       'md': '768px',
       '1md':'800px',
       // => @media (min-width: 768px) { ... }
@@ -138,6 +136,6 @@ module.exports = {
     },
   },
   plugins: [require('@tailwindcss/forms')],
- }
+}
 
 

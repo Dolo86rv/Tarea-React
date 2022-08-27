@@ -1,7 +1,7 @@
 import { Popover, Transition } from "@headlessui/react"
 import { ChevronDownIcon } from "@heroicons/react/solid"
 import { Fragment, useRef } from "react"
-import { Link} from './styles'
+import { HashLink as Link } from 'react-router-hash-link'
 
 export const Item = ({title, subMenu} = props) => {
 
@@ -31,7 +31,7 @@ export const Item = ({title, subMenu} = props) => {
   }
 
   return (
-    <div className="w-full">
+    <div className="hidden lg:block">
       <Popover>
         {({ open }) => {
           return (
@@ -45,9 +45,7 @@ export const Item = ({title, subMenu} = props) => {
                   onMouseEnter={onMouseEnter.bind(null, open)}
                   onMouseLeave={onMouseLeave.bind(null, open)}
                 >
-                  <Link>
-                    <a className="normal-case">{title}</a>
-                  </Link>
+                <a className="text-c_text normal-case font-normal text-sm not-italic leading-5 hover:text-turquee transition-colors ease-in-out duration-150 px-2">{title}</a>
                 </Popover.Button>
                 <Transition
                   as={Fragment}
@@ -58,7 +56,7 @@ export const Item = ({title, subMenu} = props) => {
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-1"
                 >
-                  <Popover.Panel className="absolute z-10 w-screen px-4 mt-2 transform -translate-x-1/2 left-1/2 sm:px-0">
+                  <Popover.Panel className="absolute z-10 w-screen px-4 mt-4 transform -translate-x-1/2 left-1/2 sm:px-0">
                     <div
                       className="overflow-hidden shadow-lg ring-1 ring-black ring-opacity-5"
                       onMouseEnter={onMouseEnter.bind(null, open)}
